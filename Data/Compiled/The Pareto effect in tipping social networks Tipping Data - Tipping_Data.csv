@@ -1,54 +1,59 @@
-ref,threshold,type,magnitude,variable,variable_type,range,effect_magnitude,effect_speed,topology,monotonic,effect_cascade_success,N,model
-Karsai_2016,0.19,model,,k,,,,,,,,,
-Xie_et_al_2011,,,,,,0.08-0.10,,,,,,,
-Min_Miguel_2023,,,>0.6,threshold,,0.12-0.25,,,,,,,
-Min_Miguel_2023,,,>0.6,z,,1-8,,,,,,,
-Min_Miguel_2023,,,>0.6,p_rewiring,,0.45-1,,,,,,,
-Nishioka_ Hasegawa_2022,,,>0.6,z,,1.6-14,,,,,,,
-Min_Miguel_2023,,,>0.6,s,,0.0002,,,,,,,
-Nishioka_ Hasegawa_2022,,,>0.6,s,,3,,,,,,,
-Lacopini_et_al_2022,,,>0.6,s,,0.01,,,,,,,
-Lacopini_et_al_2022,,,>0.6,s,,0.03,,,,,,,
-Jin_Yu_2021,,model,>0.6,global info/random rewiring,,,-/+3,3,SWN,N,-,,
-Jin_Yu_2021,,model,>0.6,global info/random rewiring,,,-3,2,ERN,Y,-,,
-Jin_Yu_2021,,model,>0.6,global info/random rewiring,,,-3,2,RRN,Y,-,,
-Jin_Yu_2021,,model,>0.6,global info/random rewiring,,,-/+3,2,HKN,N,-,,
-Jin_Yu_2021,,model,>0.6,global info/random rewiring,,,-3,1,BAN,Y,-,,
-Amato_et_al_2018,,empirical,>0.6,policy_intervention,other,,2,NA,EMP,Y,+,,
-Centola_2013,,empirical,>0.6,memory length,,,0,-2,,Y,-,,
-Centola_2013,,empirical,>0.6,population size,,,0,-1,,Y,-,,
-Centola_2013,,model,>0.6,jointness of supply,other,,,,,,+,,
-Centola_2013,,model,>0.6,homophily,,,,,NA,Y,+,,
-Centola_2013,,model,,random rewiring,,,,,NA,Y,-,,
-Xie_et_al_2011,,model,,population size,,,,,ERN,Y,+,,
-Xie_et_al_2011,,model,,population size,,,,,BA,Y,+,,
-Castilla_Rho_et_al_2017,,model,>0.5,population size,,,,,EMP,Y,+,,
-Paluck_et_al_2016,,model,>0.6,seed degree,,,,,EMP,Y,+,,
-Karsai_2016,,experimental,>0.6,population size,,,,,EMP (skype),Y,+,,
-Watts_2002,,model,>0.6,threshold,,0.1-0.25,,,RRN,,,,
-Watts_2002,,model,>0.6,avg_degree,,,,,RRN,Y,-,10000,
-Watts_2002,,model,>0.6,avg_degree,,,,-/+3,RRN,N,-/+,10000,
-Watts_2002,,model,>0.6,threshold_heterogeneity,,,,,RRN,Y,+,10000,
-Watts_2002,,model,>0.6,degree_heterogeneity,,,,,RRN,Y,-,10000,
-Karimi_Holme_2013,,model/emperical,>0.6,time_window,,,-3,,EMP,Y,-,,fractional_threshold
-Karimi_Holme_2013,,model/emperical,>0.6,time_window,,,-3,,ER,Y,-,,fractional_threshold
-Karimi_Holme_2013,,model/emperical,>0.6,time_window,,,3,,EMP,Y,+,,absolute_threshold
-Karimi_Holme_2013,,model/emperical,>0.6,time_window,,,3,,ER,Y,+,,absolute_threshold
-Nishioka_ Hasegawa_2022,,model,>0.6,avg_degree,,,-3,,ER,N,-,10000,fractional_threshold
-Nishioka_ Hasegawa_2022,,model,>0.6,clustering,,,,,EMP (facebook),N,-,10000,fractional_threshold
-Kroenke_et_al_2022,,model,>0.6,clustering,,,3,,"WS, ER",Y,+,100,fractional_threshold
-Kroenke_et_al_2022,,model,>0.6,random rewiring,,,-3,,WS,Y,-,100,fractional_threshold
-Kroenke_et_al_2022,,model,>0.6,population size,,,-3,,ER,Y,-,100,fractional_threshold
-Kroenke_et_al_2022,,model,>0.6,avg_degree,,,3,,"ER, BA, WS",Y,+,100,fractional_threshold
-Watts_Dodds_2007,,model,>0.6,seed_social_influence,,,1,,RRN,Y,+,,
-Karsai_2014,,model/empirical,>0.6,GDP,other,,2,,EMP(skype),,+,,
-Efferson_et_al_2020,,model/empirical,>0.6,homophily,,,-3,,,N,-,"100,500",
-Efferson_et_al_2020,,model/empirical,>0.6,in-group conformity,,,2,,,Y,+,"100,500",
-Centola_2010,,model/empirical,>0.6,clustering,,,,3,"CL, RRN",Y,+,"98, 128, 144",
-Centola_2010,,model/empirical,>0.6,clustering,,,2,,"CL, RRN",Y,+,"98, 128, 144",
-Centola_2010,,model/empirical,>0.6,avg_degree,,,2,,"CL, RRN",Y,+,"98, 128, 144",
-Ohtsuki_2006,,model,>0.6,population size,,,,,"L, RRN, RN, SFN",Y,-,"100, 500",
-Min_Miguel_2023,,,>0.6,random rewiring,,,-/+1,,ER,N,-,100000,
-Watts_Dodds_2007,,model,>0.6,avg_degree,,,-/+3,,RRN,N,,,
-Lacopini_et_al_2022,,model/empirical,>0.6,population size,,,-/+3,,complete,N,,"0-40, 5 ",
-Andreoni_2021,,experimental,">0,6",population size,,,,,complete,N,+,,
+ref,threshold,type,magnitude,variable,grouping_term,variable_type,range,effect_magnitude,effect_speed,topology,monotonic,effect_cascade_success,N,model
+Jin_Yu_2021,,model,>0.6,global info/random rewiring,global information,,,-/+3,3,SWN,N,-,,
+Jin_Yu_2021,,model,>0.6,global info/random rewiring,global information,,,-3,2,ERN,Y,-,,
+Jin_Yu_2021,,model,>0.6,global info/random rewiring,global information,,,-3,2,RRN,Y,-,,
+Jin_Yu_2021,,model,>0.6,global info/random rewiring,global information,,,-/+3,2,HKN,N,-,,
+Jin_Yu_2021,,model,>0.6,global info/random rewiring,global information,,,-3,1,BAN,Y,-,,
+Amato_et_al_2018,,empirical,>0.6,policy_intervention,,other,,2,NA,EMP,Y,+,,
+Centola_2013,,empirical,>0.6,memory length,,,,0,-2,,Y,-,,
+Centola_2013,,empirical,>0.6,population size,,,,0,-1,,Y,-,,
+Centola_2013,,model,>0.6,jointness of supply,switching pay off,other,,,,,,+,,
+Centola_2013,,model,>0.6,homophily,,,,,,NA,Y,+,,
+Centola_2013,,model,,random rewiring,global information,,,,,NA,Y,-,,
+Xie_et_al_2011,,model,,population size,,,,,,ERN,Y,+,,
+Xie_et_al_2011,,model,,population size,,,,,,BA,Y,+,,
+Castilla_Rho_et_al_2017,,model,>0.5,population size,,,,,,EMP,Y,+,,
+Paluck_et_al_2016,,model,>0.6,seed degree (out),out-degree,,,,,EMP,Y,+,,
+Karsai_2016,,experimental,>0.6,population size,,,,,,EMP (skype),Y,+,,
+Watts_2002,,model,>0.6,threshold,,,0.1-0.25,,,RRN,,,,
+Watts_2002,,model,>0.6,avg_degree,,,,,,RRN,Y,-,10000,
+Watts_2002,,model,>0.6,avg_degree,,,,,-/+3,RRN,N,-/+,10000,
+Watts_2002,,model,>0.6,threshold_heterogeneity,,,,,,RRN,Y,+,10000,
+Watts_2002,,model,>0.6,degree_heterogeneity,,,,,,RRN,Y,-,10000,
+Karimi_Holme_2013,,model/emperical,>0.6,time_window,,,,-3,,EMP,Y,-,,fractional_threshold
+Karimi_Holme_2013,,model/emperical,>0.6,time_window,,,,-3,,ER,Y,-,,fractional_threshold
+Karimi_Holme_2013,,model/emperical,>0.6,time_window,,,,3,,EMP,Y,+,,absolute_threshold
+Karimi_Holme_2013,,model/emperical,>0.6,time_window,,,,3,,ER,Y,+,,absolute_threshold
+Nishioka_ Hasegawa_2022,,model,>0.6,avg_degree,,,,-3,,ER,N,-,10000,fractional_threshold
+Nishioka_ Hasegawa_2022,,model,>0.6,clustering,,,,,,EMP (facebook),N,-,10000,fractional_threshold
+Kroenke_et_al_2022,,model,>0.6,clustering,,,,3,,"WS, ER",Y,+,100,fractional_threshold
+Kroenke_et_al_2022,,model,>0.6,random rewiring,global information,,,-3,,WS,Y,-,100,fractional_threshold
+Kroenke_et_al_2022,,model,>0.6,population size,,,,-3,,ER,Y,-,100,fractional_threshold
+Kroenke_et_al_2022,,model,>0.6,avg_degree,,,,3,,"ER, BA, WS",Y,+,100,fractional_threshold
+Watts_Dodds_2007,,model,>0.6,seed_social_influence,trust,,,1,,RRN,Y,+,,
+Karsai_2014,,model/empirical,>0.6,GDP,,other,,2,,EMP(skype),,+,,
+Efferson_et_al_2020,,model/empirical,>0.6,homophily,,,,-3,,,N,-,"100,500",
+Efferson_et_al_2020,,model/empirical,>0.6,in-group conformity,,,,2,,,Y,+,"100,500",
+Centola_2010,,model/empirical,>0.6,clustering,,,,,3,"CL, RRN",Y,+,"98, 128, 144",
+Centola_2010,,model/empirical,>0.6,clustering,,,,2,,"CL, RRN",Y,+,"98, 128, 144",
+Centola_2010,,model/empirical,>0.6,avg_degree,,,,2,,"CL, RRN",Y,+,"98, 128, 144",
+Ohtsuki_2006,,model,>0.6,population size,,,,,,"L, RRN, RN, SFN",Y,-,"100, 500",
+Ohtsuki_2006,,model,>0.6,avg_degree,,,,1,,"L, RRN, RN, SFN",Y,+,"100, 500",
+Min_Miguel_2023,,model,>0.6,random rewiring,global information,,,-/+1,,ER,N,-,100000,
+Watts_Dodds_2007,,model,>0.6,avg_degree,,,,-/+3,,RRN,N,,,
+Lacopini_et_al_2022,,model/empirical,>0.6,population size,,,,-/+3,,complete,N,,"0-40, 5 ",
+Andreoni_2021,,experimental,">0,6",population size,,,,,,complete,N,+,,
+Centola_2011,,experimental,">0,6",homophily,,,,3,,"L, SWN",Y,+,72,
+Gizem_et_al,,model,">0,6",population size,,,,,,ER,,-,#ERROR!,
+Gizem_et_al,,model,">0,6",population size,,,,,,ER,,-,#ERROR!,
+Okada_et_al_2022,,model ,">0,6",density,,,,,,"L,RRN, SWN",,+,1600,
+Okada_et_al_2022,,model ,">0,6",trust,trust,,,,,"L,RRN, SWN",,+,1600,
+Okada_et_al_2022,,model ,">0,6",random rewiring,global information,,,-1,,"SWN, RRN",,-,1600,
+Hodas_et_al,,experimental/model,NA,node degree (in),in-degree,,,,,"EMP (Twitter, Digg)",,-,#ERROR!,
+Hodas_et_al,,experimental/model,NA,node degree  (out),out-degree,,,,,"EMP (Twitter, Digg)",,+,#ERROR!,
+Belloti et al.,,experimental,NA,trust (in group),trust,,,2,,"EMP(tribal villages, india)",,+,2023,
+Belloti et al.,,experimental,NA,spreader influence,trust,,,1,,"EMP(tribal villages, india)",,+,2023,
+Belloti et al.,,experimental,NA,global information/weak ties,global information,,,1,,"EMP(tribal villages, india)",,+,2023,
+Belloti et al.,,experimental,NA,homophily,,,,3,,"EMP(tribal villages, india)",,+,2023,
+Belloti et al.,,experimental,NA,node degree (in),in-degree,,,-1,,"EMP(tribal villages, india)",,-,2023,
+Belloti et al.,,experimental,NA,structure,,,,,,"EMP(tribal villages, india)",,+,2023,

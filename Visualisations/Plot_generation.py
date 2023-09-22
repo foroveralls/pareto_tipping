@@ -4,16 +4,12 @@ import seaborn as sns
 
 #%%
 
-# File paths (these should be updated based on the actual paths in your system)
-filepath = "./Data/Compiled/The Pareto effect in tipping social networks Tipping Data - Tipping_Data.csv"
-
+# File paths 
+filepath = "../Data/Compiled/The Pareto effect in tipping social networks Tipping Data - Tipping_Data.csv"
 
 #%%
-# Read the data
-df = pd.read_csv(filepath)
 
 
-# Convert the 'effect_magnitude' values to numerical form to create a 'numeric_magnitude' column
 def to_numeric_magnitude(value):
     try:
         return float(value)
@@ -24,59 +20,48 @@ def to_numeric_magnitude(value):
             return -1
         else:
             return None
-        
-        
-# Filter rows where 'effect_magnitude' and 'effect_cascade_success' are not NaN
-effect_magnitude_data = df[df['effect_magnitude'].notna()].copy()
-effect_cascade_data = df[df['effect_cascade_success'].notna()]
 
-# Add a new column with numerical magnitude values
-effect_magnitude_data['numeric_magnitude'] = effect_magnitude_data['effect_magnitude'].apply(to_numeric_magnitude)
+def preprocess_data(df):
+    effect_magnitude_data = df[df['effect_magnitude'].notna()].copy()
+    effect_cascade_data = df[df['effect_cascade_success'].notna()]
+    effect_magnitude_data['numeric_magnitude'] = effect_magnitude_data['effect_magnitude'].apply(to_numeric_magnitude)
+    return effect_magnitude_data, effect_cascade_data
 
-# Group the data for the "Effect Magnitude" bar plot
-effect_magnitude_data_grouped = effect_magnitude_data.groupby(['variable', 'numeric_magnitude']).size().reset_index(name='ref_count')
-
-# Group the data for the "Effect Cascade Success" scatter plot and filter for 'ref_count' >= 1
-effect_cascade_data_grouped = effect_cascade_data.groupby(['variable', 'effect_cascade_success']).size().reset_index(name='ref_count')
-effect_cascade_data_filtered = effect_cascade_data_grouped[effect_cascade_data_grouped['ref_count'] >= 1]
-
-#%%
-# Generate the bar plot for "Effect Magnitude"
-plt.figure(figsize=(12, 8))
-
-sns.barplot(data=effect_magnitude_data_grouped.dropna(subset=['numeric_magnitude']), 
-            x='variable', y='numeric_magnitude', hue='ref_count', dodge=False, 
-            palette='viridis', edgecolor=(0, 0, 0, 0))
-
-variables_with_range = effect_magnitude_data[effect_magnitude_data['effect_magnitude'].str.contains('-/\+', na=False)]['variable'].unique()
-for idx, var in enumerate(variables_with_range):
-    if var in effect_magnitude_data_grouped['variable'].unique():
-        plt_idx = list(effect_magnitude_data_grouped['variable'].unique()).index(var)
-        plt.plot([plt_idx, plt_idx], [-3, 3], color='gray', lw=1.5)
-        plt.plot([plt_idx - 0.15, plt_idx + 0.15], [3, 3], color='gray', lw=1.5)
-        plt.plot([plt_idx - 0.15, plt_idx + 0.15], [-3, -3], color='gray', lw=1.5)
-
-plt.axhline(0, color='black', linewidth=0.8)
-plt.xticks(rotation=45, ha='right')
-plt.title('Effect Magnitude vs Variable')
-plt.ylabel('Effect Magnitude')
-plt.xlabel('Variable')
-plt.legend(title='N', loc='upper right')
-plt.tight_layout()
-plt.show()
+def plot_effect_cascade_success(effect_cascade_data):
+    effect_cascade_data['plotting_variable'] = effect_cascade_data['grouping_term'].combine_first(effect_cascade_data['variable'])
+    sns.set(style="whitegrid")
+    f, ax = plt.subplots(figsize=(6, 6))  # Adjusted the figure size to reduce white space
+    
+    effect_cascade_data = effect_cascade_data[effect_cascade_data['effect_cascade_success'] != '-/+']
+    effect_cascade_data['colors'] = effect_cascade_data['effect_cascade_success'].map({'+': 'g', '-': 'r'}).fillna('b')
+    
+    size_data = effect_cascade_data.groupby('plotting_variable').size().reset_index(name='sizes')
+    effect_cascade_data = effect_cascade_data.merge(size_data, on='plotting_variable', how='left')
+    
+    sns.scatterplot(x="effect_cascade_success", y="plotting_variable", size="sizes", marker='o',
+                    sizes=(100, 500), hue='colors', palette={'g': 'g', 'r': 'r'}, data=effect_cascade_data, ax=ax, legend=None)
+    
+    ax.set(xlabel='Measure of effect', ylabel='')
+    ax.set_title('Factors influencing cascade success')
+    ax.set_xlim(-0.5, 1.5)  # Adjusted to reduce white space to the left of the "-" column
+    plt.tight_layout()
+    plt.savefig("../Figures/Cascade_success_final.png",dpi=600 )
+    plt.show()
+   
 
 
-#%%
-# Generate the updated scatter plot for "Effect Cascade Success"
-plt.figure(figsize=(12, 8))
-sns.scatterplot(data=effect_cascade_data_filtered, x='effect_cascade_success', y='variable', 
-                hue=effect_cascade_data_filtered['effect_cascade_success'].apply(lambda x: 'Negative' if x == '-' else 'Others'),
-                size='ref_count', sizes=(40, 400), alpha=0.7, legend=True, marker='o')
-plt.xticks(fontsize=12)
-plt.xlim(-1.5, 1.5)
-plt.ylim(-1, len(effect_cascade_data_filtered['variable'].unique()))
-plt.xlabel('Effect Cascade Success', labelpad=20, fontsize=12)
-plt.title('Variable vs Effect Cascade Success')
-plt.ylabel('Variable')
-plt.tight_layout()
-plt.show()
+def main():
+    # Load the data
+    df = pd.read_csv(filepath)
+    
+    # Preprocess the data
+    effect_magnitude_data, effect_cascade_data = preprocess_data(df)
+    
+    # Generate the modified "Effect Cascade Success" plot
+    plot_effect_cascade_success(effect_cascade_data)
+    
+    # Add the "Magnitude and Cascade Size" plot (left unchanged, to be modified as per user's specific instructions)
+    # ...
+
+if __name__ == "__main__":
+    main()
