@@ -11,7 +11,7 @@ import pandas as pd
 import seaborn as sns
 import random 
 
-
+#%%
 
 def process_and_plot(df):
     """
@@ -21,7 +21,7 @@ def process_and_plot(df):
     df (pd.DataFrame): The input DataFrame.
     """
     # Filter rows where variable column is 'k'
-    df_filtered = df[df['variable'] == 'k'].copy()
+    df_filtered = df[df['variable'] == 'c'].copy()
     
     # Replace commas with decimal points and inequalities with numeric representation in the magnitude column
     df_filtered['magnitude'] = df_filtered['magnitude'].replace(',', '.', regex=False)
@@ -100,7 +100,7 @@ def process_and_plot(df):
 
 def main():
     # Define the path to the CSV file
-    csv_file_path = '../Data/Compiled/The Pareto effect in tipping social networks Tipping Data - Tipping_Data_Raw.csv'
+    csv_file_path = '../Data/Compiled/Tipping_points_fin_merged_1.csv'
     
 
     # Load the CSV file into a DataFrame
@@ -125,4 +125,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    plot_data = main()

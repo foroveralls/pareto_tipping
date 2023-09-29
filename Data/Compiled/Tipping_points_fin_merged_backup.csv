@@ -1,0 +1,128 @@
+ref,tipping_point_c_t,attribute,value,type,magnitude
+Amato_2012.csv_traj2,0.3160946304870607, change,unregulated,,
+Amato_2012.csv_traj2,0.3160946304870607, spelling ,rubbish_garbage,,
+Amato_2012.csv_traj4,0.4521960207219172, change,formal_institution,,
+Amato_2012.csv_traj4,0.4521960207219172, spelling ,quando_cuando,,
+Amato_2012.csv_traj6,0.3610871828003302, change,unregulated,,
+Amato_2012.csv_traj6,0.3610871828003302, spelling ,se_ra,,
+Amato_2012.csv_traj8,0.1800796812749003, change,informal_institution,,
+Amato_2012.csv_traj8,0.1800796812749003, spelling ,centre_center,,
+Amato_2012.csv_traj10,0.1547630402384501, change,informal_institution,,
+Amato_2012.csv_traj10,0.1547630402384501, spelling ,behavior_behaviour,,
+Krönke_2022_2_N.csv_traj2,0.4806068349451597,N,16. 5 ,,
+Krönke_2022_2_N.csv_traj4,0.4011027262273926,N,128,,
+Krönke_2022_2_N.csv_traj6,0.3052723377642056,N,1024,,
+Lacopini_2022.csv_traj2,0.3688821198483035,topology, empirical_Thiers13,,
+Lacopini_2022.csv_traj4,0.4304829847371397,topology, empirical_Theirs13_HO,,
+Jin_Yu_2021,0.1101,topology,SQL,,
+Jin_Yu_2021,0.1487,topology,SQL,,
+Jin_Yu_2021,0.1058,topology,SQL,,
+Jin_Yu_2021,0.0559,topology,SQL,,
+Jin_Yu_2021,0.0999,topology,SQL,,
+Jin_Yu_2021,0.084,topology,SQL,,
+Jin_Yu_2021,0.1074,topology,SQL,,
+Jin_Yu_2021,0.1472,topology,SQL,,
+Jin_Yu_2021,0.0983,topology,SQL,,
+Jin_Yu_2021,0.1197,topology,SQL,,
+Jin_Yu_2021,0.0597,topology,SQL,,
+Jin_Yu_2021,0.0976,topology,SQL,,
+Jin_Yu_2021,0.0969,topology,SQL,,
+Jin_Yu_2021,0.0711,topology,SQL,,
+Jin_Yu_2021,0.1682,topology,SQL,,
+Jin_Yu_2021,0.0518,topology,SQL,,
+Jin_Yu_2021,0.1077,topology,SQL,,
+Jin_Yu_2021,0.0708,topology,SQL,,
+Jin_Yu_2021,0.054,topology,SQL,,
+Jin_Yu_2021,0.088,topology,SQL,,
+Jin_Yu_2021,0.4271,topology,SQL,,
+Jin_Yu_2021,0.4271,topology,SWN,,
+Jin_Yu_2021,0.564,topology,SQL,,
+Jin_Yu_2021,0.5387,topology,SQL,,
+Jin_Yu_2021,0.453,topology,SQL,,
+Jin_Yu_2021,0.4305,topology,SQL,,
+Jin_Yu_2021,0.4388,topology,SQL,,
+Jin_Yu_2021,0.5157,topology,SQL,,
+Jin_Yu_2021,0.5114,topology,SQL,,
+Jin_Yu_2021,0.5425,topology,SQL,,
+Jin_Yu_2021,0.5063,topology,SQL,,
+Jin_Yu_2021,0.4775,topology,SQL,,
+Jin_Yu_2021,0.5635,topology,SQL,,
+Jin_Yu_2021,0.4057,topology,SQL,,
+Jin_Yu_2021,0.5126,topology,SQL,,
+Jin_Yu_2021,0.4595,topology,SQL,,
+Jin_Yu_2021,0.4825,topology,SQL,,
+Jin_Yu_2021,0.4907,topology,SQL,,
+Jin_Yu_2021,0.505,topology,SQL,,
+Jin_Yu_2021,0.4743,topology,SQL,,
+Jin_Yu_2021,0.52,topology,SQL,,
+Jin_Yu_2021,0.2992,topology,SWN,,
+Jin_Yu_2021,0.3665,topology,SWN,,
+Jin_Yu_2021,0.2902,topology,SWN,,
+Jin_Yu_2021,0.3041,topology,SWN,,
+Jin_Yu_2021,0.0892,topology,SWN,,
+Jin_Yu_2021,0.1049,topology,SWN,,
+Jin_Yu_2021,0.5071,topology,SWN,,
+Jin_Yu_2021,0.1861,topology,SWN,,
+Jin_Yu_2021,0.4381,topology,SWN,,
+Jin_Yu_2021,0.4084,topology,SWN,,
+Jin_Yu_2021,0.2028,topology,SWN,,
+Jin_Yu_2021,0.2472,topology,SWN,,
+Jin_Yu_2021,0.1904,topology,SWN,,
+Jin_Yu_2021,0.2077,topology,SWN,,
+Jin_Yu_2021,0.266,topology,SWN,,
+Jin_Yu_2021,0.2609,topology,SWN,,
+Jin_Yu_2021,0.1591,topology,SWN,,
+Jin_Yu_2021,0.2049,topology,SWN,,
+Jin_Yu_2021,0.3322,topology,SWN,,
+Jin_Yu_2021,0.3239,topology,SWN,,
+Jin_Yu_2021,0.5323,topology,SWN,,
+Jin_Yu_2021,0.469,topology,SWN,,
+Jin_Yu_2021,0.439,topology,SWN,,
+Jin_Yu_2021,0.3774,topology,SWN,,
+Jin_Yu_2021,0.4886,topology,SWN,,
+Jin_Yu_2021,0.4654,topology,SWN,,
+Jin_Yu_2021,0.4655,topology,SWN,,
+Jin_Yu_2021,0.5746,topology,SWN,,
+Jin_Yu_2021,0.5412,topology,SWN,,
+Jin_Yu_2021,0.4095,topology,SWN,,
+Jin_Yu_2021,0.5001,topology,SWN,,
+Jin_Yu_2021,0.5529,topology,SWN,,
+Jin_Yu_2021,0.4423,topology,SWN,,
+Jin_Yu_2021,0.5141,topology,SWN,,
+Jin_Yu_2021,0.4429,topology,SWN,,
+Jin_Yu_2021,0.4212,topology,SWN,,
+Jin_Yu_2021,0.4909,topology,SWN,,
+Jin_Yu_2021,0.464,topology,SWN,,
+Jin_Yu_2021,0.5595,topology,SWN,,
+Andreoni_2021,0.43,,,experimental,1.0
+Andreoni_2021,0.43,,,experimental,0.05
+Andreoni_2021,0.43,,,experimental,1.0
+Andreoni_2021,0.43,,,experimental,0.02
+Andreoni_2021,0.43,,,experimental,0.02
+Andreoni_2021,0.43,,,experimental,0.02
+Andreoni_2021,0.23,,,experimental,0.13
+Andreoni_2021,0.23,,,experimental,0.97
+Andreoni_2021,0.23,,,experimental,1.0
+Andreoni_2021,0.23,,,experimental,0.96
+Andreoni_2021,0.23,,,experimental,1.0
+Andreoni_2021,0.23,,,experimental,1.0
+Andreoni_2021,0.4,,,experimental,0.99
+Andreoni_2021,0.4,,,experimental,1.0
+Andreoni_2021,0.4,,,experimental,0.07
+Andreoni_2021,0.4,,,experimental,0.02
+Andreoni_2021,0.4,,,experimental,0.03
+Andreoni_2021,0.4,,,experimental,1.0
+Andreoni_2021,0.3,,,experimental,1.0
+Andreoni_2021,0.3,,,experimental,1.0
+Andreoni_2021,0.3,,,experimental,1.0
+Andreoni_2021,0.3,,,experimental,1.0
+Andreoni_2021,0.3,,,experimental,1.0
+Andreoni_2021,0.3,,,experimental,1.0
+Centola_2018,0.19047619047619047,,,experimental,0.0667
+Centola_2018,0.2777777777777778,,,experimental,1.0
+Centola_2018,0.20689655172413793,,,experimental,0.08
+Centola_2018,0.3076923076923077,,,experimental,1.0
+Centola_2018,0.19230769230769232,,,experimental,0.0526
+Centola_2018,0.27586206896551724,,,experimental,0.6957
+Centola_2018,0.16666666666666666,,,experimental,0.00%
+Centola_2018,0.26666666666666666,,,experimental,0.75

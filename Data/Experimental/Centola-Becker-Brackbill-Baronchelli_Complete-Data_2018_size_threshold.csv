@@ -1,7 +1,7 @@
 Complete time series data for established and alternative convention adoption in 10 trials,,,,,,
-"Centola, D., Becker, J., Brackbill, D. and Baronchelli, A. (2018). Experimental Evidence for Tipping",,,,,,
+Centola, D., Becker, J., Brackbill, D. and Baronchelli, A. (2018). Experimental Evidence for Tipping,,,,,,
 Points in Social Convention. Science.,,,,,,
-trial,N cm_count,,rounds_played,adoption_established,adoption_alternative adoption_other,
+trial,N,cm_count,rounds_played,adoption_established,adoption_alternative,adoption_other,
 1,20,4,0,88.89%,0.00%,11.11%
 1,20,4,1,93.75%,0.00%,6.25%
 1,20,4,2,93.75%,0.00%,6.25%

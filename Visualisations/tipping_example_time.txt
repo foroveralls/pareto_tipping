@@ -1,0 +1,31 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{pgfplots}
+
+\begin{document}
+
+\begin{tikzpicture}
+\begin{axis}[
+  axis lines=middle,
+  xlabel={Time},
+  ylabel={Adoption Rate},
+  domain=-6:6,
+  samples=100,
+  ymin=0,
+  ymax=1.2,
+  xmin=-6,
+  xmax=6,
+  grid=both,
+  grid style={line width=.1pt, draw=gray!20},
+  major grid style={line width=.2pt,draw=gray!50},
+  title={Diffusion of Innovations Curve and its Second Derivative}
+  ]
+  
+  % Sigmoid Curve (Diffusion of Innovations)
+  \addplot[blue, thick, smooth] {1/(1+exp(-x))} node[above, pos=0.8, xshift=10pt] {Sigmoid Curve};
+  
+  % Second Derivative of Sigmoid Curve
+  \addplot[red, thick, smooth] {exp(-x)/(1+exp(-x))^3} node[above, pos=0.2, xshift=-10pt] {Second Derivative};
+\end{axis}
+\end{tikzpicture}
+
+\end{document}
