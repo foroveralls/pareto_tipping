@@ -30,7 +30,9 @@ pareto_cdf = 1 - (0.1 / x1) ** 2
 x2 = np.linspace(0, 10, 100)
 
 # Initialize the figure and axes with adjusted width ratio
-fig = plt.figure(figsize=(12, 6))
+
+#fig = plt.figure(figsize=(12, 6))
+fig = plt.figure(figsize=(10, 5))
 gs = gridspec.GridSpec(1, 2, width_ratios=[1, 1])  # Set the width ratio to 1:1
 ax0 = plt.subplot(gs[0])
 ax1 = plt.subplot(gs[1], sharey=ax0)  # Share the y-axis with the first plot
@@ -40,7 +42,7 @@ sns.lineplot(x=x1, y=x1, ax=ax0, color='black', linestyle='--')
 sns.lineplot(x=x1, y=pareto_cdf, ax=ax0, color='black', linestyle='-')
 ax0.fill_between(x1, 1, x1, color='blue', alpha=0.4)
 ax0.set_xlabel('$λ$')
-ax0.set_ylabel('$F(λ) \\to \\infty$')
+ax0.set_ylabel('$F(λ) _t\\to \\infty$')
 ax0.legend(['Linear response', 'Pareto CDF', 'Tipping Zone'], loc='upper center', bbox_to_anchor=(0.5, 1.15), ncol=3, fontsize='small')
 ax0.set_xlim([0, 1.1])
 ax0.set_ylim([0, 1.1])
@@ -54,7 +56,7 @@ ax1.axhline(0.2, color='black', linestyle='--')
 ax1.axhline(0.8, color='black', linestyle='--')
 ax1.text(0.2, 0.13, 'Triggering Phase', fontsize=8, va='center', ha='left')
 ax1.text(0.2, 0.5, 'Tipping Phase', fontsize=8, va='center', ha='left')
-ax1.text(0.2, 0.9, 'Consolidation Phase', fontsize=8, va='center', ha='left')
+ax1.text(0.2, 0.9, 'Manifestation Phase', fontsize=8, va='center', ha='left')
 ax1.set_xlabel('$t$')
 ax1.set_ylabel('$F(t)$')  # Add back the y label
 ax1.legend(['Adopters, $F(t)$', "Second Derivative, $F''(t)$"], loc='upper center', bbox_to_anchor=(0.5, 1.15), ncol=2, fontsize='small')

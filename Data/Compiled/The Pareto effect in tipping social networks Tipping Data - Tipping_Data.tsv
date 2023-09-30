@@ -1,0 +1,89 @@
+ref	threshold	type	magnitude	variable	grouping_term	variable_type	range	effect_magnitude	effect_speed	topology	monotonic	effect_cascade_success	N	model
+Castilla_Rho_et_al_2017		model	>0.5	Avg degree	Network connectivity					grid	Y	+		
+Centola_2010		model/empirical	>0.6	Avg degree	Network connectivity			2		CL, RRN	Y	+	98, 128, 144	
+Kroenke_et_al_2022		model/observational	>0.6	Avg degree	Network connectivity			3		ER, BA, WS	Y	+	100	fractional_threshold
+Nishioka_ Hasegawa_2022		model	>0.6	Avg degree	Network connectivity			-3		ER	N	-	10000	fractional_threshold
+Ohtsuki_2006		model	>0.6	Avg degree	Network connectivity			1		L, RRN, RN, SFN	Y	+	100, 500	
+Watts_2002		model	>0.6	Avg degree	Network connectivity					RRN	Y	-	10000	
+Watts_2002		model	>0.6	Avg degree	Network connectivity				-/+3	RRN	N	-/+	10000	
+Watts_Dodds_2007		model	>0.6	Avg degree	Network connectivity			-/+3		RRN	N	-/+		
+Centola_2010		model/empirical	>0.6	Clustering					3	CL, RRN	Y	+	98, 128, 144	
+Centola_2010		model/empirical	>0.6	Clustering				2		CL, RRN	Y	+	98, 128, 144	
+Centola_2013		model	>0.6	Clustering				3		RRN, CL	Y	+		
+Christakis & Fowler_a		observational	NA	Clustering						EMP(smokers networks)	Y	+	12067	
+Kroenke_et_al_2022		model/observational	>0.6	Clustering				3		WS, ER	Y	+	100	fractional_threshold
+Nishioka_ Hasegawa_2022		model	>0.6	Clustering						EMP (facebook)	N	-	10000	fractional_threshold
+Nishioka_ Hasegawa_2022		model	>0.6	Clustering						EMP(facebook), ERRG	Y	+	4048	
+Fink et al 		observational	>0.6	Clustering						EMP(twitter)	Y	+		
+Watts_2002		model	>0.6	Degree Heterogeneity						RRN	Y	-	10000	
+Okada_et_al_2022		model 	>0,6	Density						L,RRN, SWN	Y	+	1600	
+Karsai_2014		model/empirical	>0.6	GDP		other		2		EMP(skype)	Y	+		
+Karsai_2014		model/empirical	>0.6	GDP		other			2	EMP(skype)	Y	+		
+Bond et al 2012		experimental	>0.6	Geographical proximity				2		EMP(Facebook)	Y	+	61000000	
+Fowler & Christakis_b		observational	NA	Geographical proximity						EMP(friendship network)	Y	+	12067	
+Jin_Yu_2021		model	>0.6	Global info/random rewiring	Global information			-/+3	3	SWN	N	-/+		
+Jin_Yu_2021		model	>0.6	Global info/random rewiring	Global information			-3	2	ERN	Y	-		
+Jin_Yu_2021		model	>0.6	Global info/random rewiring	Global information			-3	2	RRN	Y	-		
+Jin_Yu_2021		model	>0.6	Global info/random rewiring	Global information			-/+3	2	HKN	N	-/+		
+Jin_Yu_2021		model	>0.6	Global info/random rewiring	Global information			-3	1	BAN	Y	-		
+Belloti et al.		experimental	NA	Global information/weak ties	Global information			1		EMP(tribal villages, india)	Y	+	2023	
+Centola & Baronchelli_2015		experimental	>0.6	Homogenously mixing network	Global information			3		complete	Y	+	24, 48, 96	
+Belloti et al.		experimental	NA	Homophily				3		EMP(tribal villages, india)	Y	+	2023	
+Centola_2011		experimental	>0,6	Homophily				3		L, SWN	Y	+	72	
+Centola_2013		model	>0.6	Homophily				3		RRN, CL	Y	+		
+Efferson_et_al_2020		model/empirical	>0.6	Homophily				-3			N	-	100,500	
+Efferson_et_al_2020		model/empirical	>0.6	In-group conformity				-/+2			N	-/+	100,500	
+Zhu et al 2019		model	>0.6	Information transmission probability	Information density			3		ER-ER, ER-SF, SF-SF	Y	+	1000	
+Han et al 2020		observational/model	>0.6	Information transmission rate	Information density			3		Power law, EMP(WWW)	Y	+	1000	
+Centola_2013		model	>0.6	Jointness of supply	Switching pay off	other					Y	+		
+Centola & Baronchelli_2015		experimental	>0.6	Lattice				3		complete	Y	+	24, 48, 96	
+Efferson_et_al_2020		model/empirical	>0.6	Linkage probability	Network connectivity			#ERROR!			N	-	100,500	
+Centola_2018		empirical	>0.6	Memory length				0	-2		Y	-	25	
+Centola_et_al_2018		experimental/model	>0.6	Memory length				0	-2	complete	Y	-		
+Centola & Baronchelli_2015		experimental	>0.6	Network size	Population size				-1	complete	Y		24, 48, 96	
+Hodas_et_al		experimental/model	NA	Node degree  (out)	Out-degree					EMP (Twitter, Digg)	Y	+	#ERROR!	
+Belloti et al.		experimental	NA	Node degree (in)	In-degree			-1		EMP(tribal villages, india)	Y	-	2023	
+Hodas_et_al		experimental/model	NA	Node degree (in)	In-degree					EMP (Twitter, Digg)	Y	-	#ERROR!	
+Amato_et_al_2018		observational	>0.6	Policy intervention		other		2	NA	EMP	Y	+		
+Andreoni_2021		experimental/model	1	Population size	Population size					complete	N	+	0-40, 5	
+Baronchelli_et_al_2006		model	1	Population size	Population size				1	complete	Y	-	1000	
+Castilla_Rho_et_al_2017		model	>0.5	Population size	Population size					grid	Y	+		
+Centola_2018		empirical	>0.6	Population size	Population size			0	-1		Y	-	25	
+Gizem_et_al		model	>0,6	Population size	Population size					ER	Y	-	#ERROR!	
+Gizem_et_al		model	>0,6	Population size	Population size					ER	Y	-	#ERROR!	
+Karsai_2016		experimental	>0.6	Population size	Population size					EMP (skype)	Y	+		
+Kroenke_et_al_2022		model/observational	>0.6	Population size	Population size			-3		ER	Y	-	100	fractional_threshold
+Lacopini_et_al_2022		model/empirical	>0.6	Population size	Population size			-/+3		complete	N	-/+	0-40, 5 	
+Ohtsuki_2006		model	>0.6	Population size	Population size					L, RRN, RN, SFN	Y	-	100, 500	
+Xie_et_al_2011		model	>0.6	Population size	Population size					ERN	Y	+		
+Xie_et_al_2011		model	>0.6	Population size	Population size				-3		Y	-		
+Xie_et_al_2011		model	>0.6	Population size	Population size					BA	Y	+		
+Andreoni_2021		experimental/model	1	Public awareness	Global information			2		complete	Y	+	0-40, 5	
+Centola_2013		model	>0.6	Random rewiring				-3		RRN, CL	Y	-		
+Kroenke_et_al_2022		model/observational	>0.6	Random rewiring				-3		WS	Y	-	100	fractional_threshold
+Min_Miguel_2023		model	>0.6	Random rewiring				-/+1		ER	N	-/+	100000	
+Okada_et_al_2022		model 	>0,6	Random rewiring				-1		SWN, RRN	Y	-	1600	
+Paluck_et_al_2016		experimental	>0.6	Seed degree (out)	social influence					EMP(shool)	Y	+	431	
+Watts_Dodds_2007		model/observational	>0.6	Seed social influence	trust			1		RRN	Y	+		
+Nishioka_ Hasegawa_2022		model	>0.6	Social influence of seed nodes	trust					EMP(facebook), ERRG	Y	+	4048	
+Christakis & Fowler_a		observational	NA	Social proximity						EMP(smokers networks)	Y	+	12067	
+Fowler & Christakis_b		observational	NA	Social proximity						EMP(friendship network)	Y	+	12067	
+Fowler & Christakis_c		observational	NA	Social proximity						EMP(friendship network)	Y	+	12067	
+Paluck_et_al_2016		experimental	>0.6	Social referents	Social influence			3		EMP(shool)	Y	+	431	
+Belloti et al.		experimental	NA	Spreader influence	Trust			1		EMP(tribal villages, india)	Y	+	2023	
+Belloti et al.		experimental	NA	Structure	Network connectivity					EMP(tribal villages, india)	Y	+	2023	
+Lacopini_et_al_2022		observational/model	>0.6	Stubborness	Trust			-/+3		EMP(various)	N	-/+		
+Watts_2002		model	>0.6	Threshold heterogeneity						RRN	Y	+	10000	
+Bond et al 2012		experimental	>0.6	Tie strength	Trust			3		EMP(Facebook)	Y	+	61000000	
+Christakis & Fowler_a		observational	NA	Tie strength	Trust					EMP(smokers networks)	Y	+	12067	
+Fowler & Christakis_b		observational	NA	Tie strength	Trust					EMP(friendship network)	Y	+	12067	
+Fowler & Christakis_c		observational	NA	Tie strength	Trust					EMP(friendship network)	Y	+	12067	
+Karimi_Holme_2013		model/emperical	>0.6	Time window				-3		EMP	Y	-		fractional_threshold
+Karimi_Holme_2013		model/emperical	>0.6	Time window				-3		ER	Y	-		fractional_threshold
+Karimi_Holme_2013		model/emperical	>0.6	Time window				3		EMP	Y	+		absolute_threshold
+Karimi_Holme_2013		model/emperical	>0.6	Time window				3		ER	Y	+		absolute_threshold
+Okada_et_al_2022		model 	>0,6	Trust	Trust					L,RRN, SWN	Y	+	1600	
+Belloti et al.		experimental	NA	Trust (in group)	Trust			2		EMP(tribal villages, india)	Y	+	2023	
+Bond et al 2012		experimental	>0.6	Weak ties	Global information			1		EMP(Facebook)	Y	+	61000000	
+Castilla_Rho_et_al_2017		model	>0.5	Zealots 						grid	Y	+		
+Paluck_et_al_2016		experimental	>0.6	Zealots 						EMP(shool)	Y	+	431	

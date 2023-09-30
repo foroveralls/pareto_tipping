@@ -9,9 +9,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
+import re 
 
 # File paths
-filepath = "../Data/Compiled/The Pareto effect in tipping social networks Tipping Data - Tipping_Data.csv"
+filepath = "../Data/Compiled/The Pareto effect in tipping social networks Tipping Data - Tipping_Data.tsv"
 
 
 def to_numeric_magnitude(value):
@@ -24,6 +25,24 @@ def to_numeric_magnitude(value):
             return -1
         return None
 
+# def manual_read_csv(filepath):
+#     with open(filepath, 'r') as file:
+#         lines = file.readlines()
+    
+#     # Extract the header and initialize the DataFrame
+#     header = lines[0].strip().split(",")
+#     df = pd.DataFrame(columns=header)
+    
+#     # Process each line and append to the DataFrame
+#     for line in lines[1:]:  # Skip header line
+#         # Stripping leading and trailing whitespaces and splitting by comma not within quotes
+#         values = [value.strip() for value in re.split(',(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)', line.strip())]
+#         if len(values) == len(header):
+#             df.loc[len(df)] = values
+#         else:
+#             print(f"Skipping malformed line: {line.strip()}")
+    
+#     return df
 
 def preprocess_data(df):
     effect_magnitude_data = df[df['effect_magnitude'].notna()].copy()
@@ -57,11 +76,12 @@ def preprocess_data(df):
     mask_1 = (effect_magnitude_data.groupby('variable')['variable'].transform('count') == 1) & (effect_magnitude_data['grouping_term'].isna())
     
     effect_magnitude_data.loc[effect_magnitude_data['grouping_term'].notna(), 'variable'] = effect_magnitude_data['grouping_term']
+    
     # Remove rows with values that meet both conditions
     effect_cascade_data = effect_cascade_data[~mask]
     effect_magnitude_data = effect_magnitude_data[~mask_1]
     
-    return effect_magnitude_data, effect_cascade_data
+    return effect_magnitude_data, effect_cascade_data, df
 
 def plot_effect_cascade_success(effect_cascade_data):
     effect_cascade_data['plotting_variable'] = effect_cascade_data['grouping_term'].combine_first(effect_cascade_data['variable'])
@@ -91,27 +111,31 @@ def plot_effect_cascade_success(effect_cascade_data):
     plt.show()
 
 def plot_effect_magnitude(effect_magnitude_data):
+    # Replacing nan in 'variable' column with 'Unknown'
+    effect_magnitude_data['variable'].fillna('Unknown', inplace=True)
+    
     sns.set(style="whitegrid")
-    plt.figure(figsize=(7, 5))
+    plt.figure(figsize=(7, 7))  # Increase the figure height
     ax = plt.gca()
-    ax.set_xlim(-0.5, 2.5)
     variables = effect_magnitude_data['variable'].unique()
-    symbols = effect_magnitude_data['symbol'].unique()
-    y_positions = {variable: i for i, variable in enumerate(variables)}
+    symbols = {'+': 0, '-': 1, '±': 2}  # Map symbols to x positions
+    y_positions = {variable: i * 2 for i, variable in enumerate(variables)}  # Increase spacing between y-ticks
     color_mapping = {'+': 'g', '-': 'r', '±': 'b'}
     size_mapping = {1.0: 50, 2.0: 100, 3.0: 150}
-    jitter = 0.3
+    x_jitter = 0.2 # Jitter on the x-axis
+    y_jitter = 0  # Jitter on the y-axis
     
     for index, row in effect_magnitude_data.iterrows():
-        y = y_positions[row['variable']] + np.random.uniform(-jitter, jitter)
-        x_jitter = np.random.uniform(-1, 1)  # Adding jitter to the x-axis
+        y = y_positions[row['variable']] + np.random.uniform(-y_jitter, y_jitter)  # Adding jitter to the y-axis
+        x = symbols.get(row['symbol'], 2) + np.random.uniform(-x_jitter, x_jitter)  # Getting the x position based on the symbol and adding jitter to the x-axis
         size = size_mapping.get(row['numeric_magnitude'], 50)
-        symbol = row['symbol']
-        color = color_mapping.get(symbol, 'b')
-        sns.scatterplot(x=[symbol], y=[y], size=[size], sizes=(size, size), alpha=0.8, color=color, marker='D', edgecolor='w', linewidth=0.5)
+        color = color_mapping.get(row['symbol'], 'b')
+        sns.scatterplot(x=[x], y=[y], size=[size], sizes=(size, size), alpha=0.8, color=color, marker='D', edgecolor='w', linewidth=0.5)
     
     ax.set_yticks(list(y_positions.values()))
     ax.set_yticklabels(list(y_positions.keys()))
+    ax.set_xticks(list(symbols.values()))
+    ax.set_xticklabels(list(symbols.keys()))
     
     legend_elements = [plt.Line2D([0], [0], marker='D', color='w', markerfacecolor='grey', markersize=np.sqrt(size), label=f"{int(size_val)}")
                        for size_val, size in size_mapping.items()]
@@ -119,17 +143,19 @@ def plot_effect_magnitude(effect_magnitude_data):
     ax.legend(handles=legend_elements, loc='center left', bbox_to_anchor=(1,0.8), title='Magnitude')
     plt.title('Social network characteristics and their effect on cascade magnitude')
     plt.xlabel('Effect Magnitude')
-    #plt.ylabel('')
+    
     plt.tight_layout()
-    plt.savefig("../Figures/Cascade_magnitud_final.png", dpi=600)
+    plt.savefig("../Figures/Cascade_magnitude_final.png", dpi=600)
     plt.show()
 
+
 def main():
-    df = pd.read_csv(filepath)
-    effect_magnitude_data, effect_cascade_data = preprocess_data(df)
+    df = pd.read_csv(filepath, sep= "\t")  # Use the improved data reading function
+    print(df)
+    effect_magnitude_data, effect_cascade_data, og = preprocess_data(df)
     plot_effect_cascade_success(effect_cascade_data)
     plot_effect_magnitude(effect_magnitude_data)  # Ensure 'symbol' column is properly created before this line
-    return effect_cascade_data
+    return effect_cascade_data, effect_magnitude_data, og
 
 if __name__ == "__main__":
-    test = main()
+    test1, test2, og = main()

@@ -20,30 +20,32 @@ def harmonize_ref(ref):
     return ref
 
 def load_and_process_data(file_path):
-    """Loads and processes the data from the specified file path"""
+    """Loads, processes and filters the data from the specified file path"""
     df = pd.read_csv(file_path)
     df['harmonized_ref'] = df['ref'].apply(harmonize_ref)
-    
+
     harmonized_balanced_dfs = []
     max_experimental_count = df[df['type'] == 'experimental'].groupby('harmonized_ref').size().max()
 
     for harmonized_ref, group in df.groupby('harmonized_ref'):
+        # Filtering to keep only rows with unique 'tipping_point' or 'magnitude' values within each group
+        group = group.drop_duplicates(subset=['tipping_point', 'magnitude'])
+
         experimental_group = group[group['type'] == 'experimental']
         modelling_group = group[group['type'] != 'experimental'].copy()
         modelling_group['type'].fillna('modelling', inplace=True)
-        
+
         if len(modelling_group) > max_experimental_count:
             modelling_group = modelling_group.sample(n=max_experimental_count, random_state=42)
-        
+
         harmonized_balanced_group = pd.concat([experimental_group, modelling_group], ignore_index=True)
         harmonized_balanced_dfs.append(harmonized_balanced_group)
 
     harmonized_balanced_df = pd.concat(harmonized_balanced_dfs, ignore_index=True)
     harmonized_balanced_df['type'] = harmonized_balanced_df['type'].apply(lambda x: 'empirical' if x == 'experimental' else 'modelling')
     harmonized_balanced_df['magnitude'] = harmonized_balanced_df['magnitude'].replace('[\%,]', '', regex=True).apply(pd.to_numeric, errors='coerce')
-    
     harmonized_balanced_df["type"] = np.where(harmonized_balanced_df["harmonized_ref"] == "Amato_2012.csv", "empirical", harmonized_balanced_df["type"])
-    
+
     return harmonized_balanced_df
 
 def plot_data(df):
@@ -65,7 +67,7 @@ def plot_data(df):
     plt.tight_layout()
     
     # Show the integrated plot with the final modifications
-    plt.savefig("../Figures/critical_values.png", dpi=600 )
+    #plt.savefig("../Figures/critical_values.png", dpi=600 )
 
 
 #%%
@@ -74,7 +76,7 @@ file_path_fin = '../Data/Compiled/Tipping_threshold_plot.csv'
 
 #df.to_csv(file_path_fin, index=False)
 
-#df = load_and_process_data(file_path)
-df = pd.read_csv(file_path_fin)
+df = load_and_process_data(file_path)
+#df = pd.read_csv(file_path_fin)
 #plot_data(df)
 

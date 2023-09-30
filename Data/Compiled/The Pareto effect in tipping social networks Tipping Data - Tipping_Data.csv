@@ -1,50 +1,50 @@
 ref,threshold,type,magnitude,variable,grouping_term,variable_type,range,effect_magnitude,effect_speed,topology,monotonic,effect_cascade_success,N,model
 Amato_et_al_2018,,observational,>0.6,policy_intervention,,other,,2,NA,EMP,Y,+,,
-Andreoni_2021,,experimental/model,1,population size,population size,,,,,complete,N,+,"0-40, 5",
-Andreoni_2021,,experimental/model,1,public awareness,global information,,,2,,complete,Y,+,"0-40, 5",
+"Andreoni_2021,,experimental/model,1,population size,population size,,,,,complete,N,+,""0-40, 5"","
+"Andreoni_2021,,experimental/model,1,public awareness,global information,,,2,,complete,Y,+,""0-40, 5"","
 Baronchelli_et_al_2006,,model,1,population size,population size,,,,1,complete,Y,-,1000,
-Belloti et al.,,experimental,NA,trust (in group),trust,,,2,,"EMP(tribal villages, india)",,+,2023,
-Belloti et al.,,experimental,NA,spreader influence,trust,,,1,,"EMP(tribal villages, india)",,+,2023,
-Belloti et al.,,experimental,NA,global information/weak ties,global information,,,1,,"EMP(tribal villages, india)",,+,2023,
-Belloti et al.,,experimental,NA,homophily,,,,3,,"EMP(tribal villages, india)",,+,2023,
-Belloti et al.,,experimental,NA,node degree (in),in-degree,,,-1,,"EMP(tribal villages, india)",,-,2023,
-Belloti et al.,,experimental,NA,structure,network connectivity,,,,,"EMP(tribal villages, india)",,+,2023,
+"Belloti et al.,,experimental,NA,trust (in group),trust,,,2,,""EMP(tribal villages, india)"",,+,2023,"
+"Belloti et al.,,experimental,NA,spreader influence,trust,,,1,,""EMP(tribal villages, india)"",,+,2023,"
+"Belloti et al.,,experimental,NA,global information/weak ties,global information,,,1,,""EMP(tribal villages, india)"",,+,2023,"
+"Belloti et al.,,experimental,NA,homophily,,,,3,,""EMP(tribal villages, india)"",,+,2023,"
+"Belloti et al.,,experimental,NA,node degree (in),in-degree,,,-1,,""EMP(tribal villages, india)"",,-,2023,"
+"Belloti et al.,,experimental,NA,structure,network connectivity,,,,,""EMP(tribal villages, india)"",,+,2023,"
 Bond et al 2012,,experimental,>0.6,tie strength,trust,,,3,,EMP(Facebook),,+,61000000,
 Bond et al 2012,,experimental,>0.6,weak ties,global information,,,1,,EMP(Facebook),,+,61000000,
 Bond et al 2012,,experimental,>0.6,geographical proximity,,,,2,,EMP(Facebook),,+,61000000,
 Castilla_Rho_et_al_2017,,model,>0.5,population size,population size,,,,,grid,Y,+,,
 Castilla_Rho_et_al_2017,,model,>0.5,zealots ,,,,,,grid,Y,+,,
 Castilla_Rho_et_al_2017,,model,>0.5,avg_degree,network connectivity,,,,,grid,Y,+,,
-Centola & Baronchelli_2015,,experimental,>0.6,homogenously mixing network,global information,,,3,,complete,Y,+,"24, 48, 96",
-Centola & Baronchelli_2015,,experimental,>0.6,lattice,,,,3,,complete,Y,+,"24, 48, 96",
-Centola & Baronchelli_2015,,experimental,>0.6,network size,population size,,,,-1,complete,,,"24, 48, 96",
-Centola_2010,,model/empirical,>0.6,clustering,,,,,3,"CL, RRN",Y,+,"98, 128, 144",
-Centola_2010,,model/empirical,>0.6,clustering,,,,2,,"CL, RRN",Y,+,"98, 128, 144",
-Centola_2010,,model/empirical,>0.6,avg_degree,network connectivity,,,2,,"CL, RRN",Y,+,"98, 128, 144",
-Centola_2011,,experimental,">0,6",homophily,,,,3,,"L, SWN",Y,+,72,
+"Centola & Baronchelli_2015,,experimental,>0.6,homogenously mixing network,global information,,,3,,complete,Y,+,""24, 48, 96"","
+"Centola & Baronchelli_2015,,experimental,>0.6,lattice,,,,3,,complete,Y,+,""24, 48, 96"","
+"Centola & Baronchelli_2015,,experimental,>0.6,network size,population size,,,,-1,complete,,,""24, 48, 96"","
+"Centola_2010,,model/empirical,>0.6,clustering,,,,,3,""CL, RRN"",Y,+,""98, 128, 144"","
+"Centola_2010,,model/empirical,>0.6,clustering,,,,2,,""CL, RRN"",Y,+,""98, 128, 144"","
+"Centola_2010,,model/empirical,>0.6,avg_degree,network connectivity,,,2,,""CL, RRN"",Y,+,""98, 128, 144"","
+"Centola_2011,,experimental,"">0,6"",homophily,,,,3,,""L, SWN"",Y,+,72,"
 Centola_2013,,model,>0.6,jointness of supply,switching pay off,other,,,,,,+,,
-Centola_2013,,model,>0.6,homophily,,,,3,,"RRN, CL",Y,+,,
-Centola_2013,,model,>0.6,random rewiring,,,,-3,,"RRN, CL",Y,-,,
-Centola_2013,,model,>0.6,clustering,,,,3,,"RRN, CL",Y,+,,
+"Centola_2013,,model,>0.6,homophily,,,,3,,""RRN, CL"",Y,+,,"
+"Centola_2013,,model,>0.6,random rewiring,,,,-3,,""RRN, CL"",Y,-,,"
+"Centola_2013,,model,>0.6,clustering,,,,3,,""RRN, CL"",Y,+,,"
 Centola_2018,,empirical,>0.6,memory length,,,,0,-2,,Y,-,25,
 Centola_2018,,empirical,>0.6,population size,population size,,,0,-1,,Y,-,25,
 Centola_et_al_2018,,experimental/model,>0.6,memory length,,,,0,-2,complete,Y,-,,
 Christakis & Fowler_a,,observational,NA,tie strength,trust,,,,,EMP(smokers networks),,+,12067,
 Christakis & Fowler_a,,observational,NA,social proximity,,,,,,EMP(smokers networks),,+,12067,
 Christakis & Fowler_a,,observational,NA,clustering,,,,,,EMP(smokers networks),,+,12067,
-Efferson_et_al_2020,,model/empirical,>0.6,homophily,,,,-3,,,N,-,"100,500",
-Efferson_et_al_2020,,model/empirical,>0.6,linkage probability,network connectivity,,,#ERROR!,,,N,-,"100,500",
-Efferson_et_al_2020,,model/empirical,>0.6,in-group conformity,,,,-/+2,,,N,-/+,"100,500",
+"Efferson_et_al_2020,,model/empirical,>0.6,homophily,,,,-3,,,N,-,""100,500"","
+"Efferson_et_al_2020,,model/empirical,>0.6,linkage probability,network connectivity,,,#ERROR!,,,N,-,""100,500"","
+"Efferson_et_al_2020,,model/empirical,>0.6,in-group conformity,,,,-/+2,,,N,-/+,""100,500"","
 Fowler & Christakis_b,,observational,NA,tie strength,trust,,,,,EMP(friendship network),,+,12067,
 Fowler & Christakis_b,,observational,NA,social proximity,,,,,,EMP(friendship network),,+,12067,
 Fowler & Christakis_b,,observational,NA,geographical proximity,,,,,,EMP(friendship network),,+,12067,
 Fowler & Christakis_c,,observational,NA,social proximity,,,,,,EMP(friendship network),,+,12067,
 Fowler & Christakis_c,,observational,NA,tie strength,trust,,,,,EMP(friendship network),,+,12067,
-Gizem_et_al,,model,">0,6",population size,population size,,,,,ER,,-,#ERROR!,
-Gizem_et_al,,model,">0,6",population size,population size,,,,,ER,,-,#ERROR!,
-Han et al 2020,,observational/model,>0.6,information transmission rate,information density,,,3,,"Power law, EMP(WWW)",,+,1000,
-Hodas_et_al,,experimental/model,NA,node degree (in),in-degree,,,,,"EMP (Twitter, Digg)",,-,#ERROR!,
-Hodas_et_al,,experimental/model,NA,node degree  (out),out-degree,,,,,"EMP (Twitter, Digg)",,+,#ERROR!,
+"Gizem_et_al,,model,"">0,6"",population size,population size,,,,,ER,,-,#ERROR!,"
+"Gizem_et_al,,model,"">0,6"",population size,population size,,,,,ER,,-,#ERROR!,"
+"Han et al 2020,,observational/model,>0.6,information transmission rate,information density,,,3,,""Power law, EMP(WWW)"",,+,1000,"
+"Hodas_et_al,,experimental/model,NA,node degree (in),in-degree,,,,,""EMP (Twitter, Digg)"",,-,#ERROR!,"
+"Hodas_et_al,,experimental/model,NA,node degree  (out),out-degree,,,,,""EMP (Twitter, Digg)"",,+,#ERROR!,"
 Jin_Yu_2021,,model,>0.6,global info/random rewiring,global information,,,-/+3,3,SWN,N,-/+,,
 Jin_Yu_2021,,model,>0.6,global info/random rewiring,global information,,,-3,2,ERN,Y,-,,
 Jin_Yu_2021,,model,>0.6,global info/random rewiring,global information,,,-3,2,RRN,Y,-,,
@@ -57,22 +57,22 @@ Karimi_Holme_2013,,model/emperical,>0.6,time_window,,,,3,,ER,Y,+,,absolute_thres
 Karsai_2014,,model/empirical,>0.6,GDP,,other,,2,,EMP(skype),,+,,
 Karsai_2014,,model/empirical,>0.6,GDP,,other,,,2,EMP(skype),,+,,
 Karsai_2016,,experimental,>0.6,population size,population size,,,,,EMP (skype),Y,+,,
-Kroenke_et_al_2022,,model/observational,>0.6,clustering,,,,3,,"WS, ER",Y,+,100,fractional_threshold
+"Kroenke_et_al_2022,,model/observational,>0.6,clustering,,,,3,,""WS, ER"",Y,+,100,fractional_threshold"
 Kroenke_et_al_2022,,model/observational,>0.6,random rewiring,,,,-3,,WS,Y,-,100,fractional_threshold
 Kroenke_et_al_2022,,model/observational,>0.6,population size,,,,-3,,ER,Y,-,100,fractional_threshold
-Kroenke_et_al_2022,,model/observational,>0.6,avg_degree,network connectivity,,,3,,"ER, BA, WS",Y,+,100,fractional_threshold
-Lacopini_et_al_2022,,model/empirical,>0.6,population size,population size,,,-/+3,,complete,N,-/+,"0-40, 5 ",
+"Kroenke_et_al_2022,,model/observational,>0.6,avg_degree,network connectivity,,,3,,""ER, BA, WS"",Y,+,100,fractional_threshold"
+"Lacopini_et_al_2022,,model/empirical,>0.6,population size,population size,,,-/+3,,complete,N,-/+,""0-40, 5 "","
 Lacopini_et_al_2022,,observational/model,>0.6,stubborness,trust,,,-/+3,,EMP(various),N,-/+,,
 Min_Miguel_2023,,model,>0.6,random rewiring,,,,-/+1,,ER,N,-/+,100000,
 Nishioka_ Hasegawa_2022,,model,>0.6,avg_degree,network connectivity,,,-3,,ER,N,-,10000,fractional_threshold
 Nishioka_ Hasegawa_2022,,model,>0.6,clustering,,,,,,EMP (facebook),N,-,10000,fractional_threshold
-Nishioka_ Hasegawa_2022,,model,>0.6,clustering,,,,,,"EMP(facebook), ERRG",,+,4048,
-Nishioka_ Hasegawa_2022,,model,>0.6,social influence of seed nodes,trust,,,,,"EMP(facebook), ERRG",,+,4048,
-Ohtsuki_2006,,model,>0.6,population size,population size,,,,,"L, RRN, RN, SFN",Y,-,"100, 500",
-Ohtsuki_2006,,model,>0.6,avg_degree,,,,1,,"L, RRN, RN, SFN",Y,+,"100, 500",
-Okada_et_al_2022,,model ,">0,6",density,,,,,,"L,RRN, SWN",,+,1600,
-Okada_et_al_2022,,model ,">0,6",trust,trust,,,,,"L,RRN, SWN",,+,1600,
-Okada_et_al_2022,,model ,">0,6",random rewiring,,,,-1,,"SWN, RRN",,-,1600,
+"Nishioka_ Hasegawa_2022,,model,>0.6,clustering,,,,,,""EMP(facebook), ERRG"",,+,4048,"
+"Nishioka_ Hasegawa_2022,,model,>0.6,social influence of seed nodes,trust,,,,,""EMP(facebook), ERRG"",,+,4048,"
+"Ohtsuki_2006,,model,>0.6,population size,population size,,,,,""L, RRN, RN, SFN"",Y,-,""100, 500"","
+"Ohtsuki_2006,,model,>0.6,avg_degree,,,,1,,""L, RRN, RN, SFN"",Y,+,""100, 500"","
+"Okada_et_al_2022,,model ,"">0,6"",density,,,,,,""L,RRN, SWN"",,+,1600,"
+"Okada_et_al_2022,,model ,"">0,6"",trust,trust,,,,,""L,RRN, SWN"",,+,1600,"
+"Okada_et_al_2022,,model ,"">0,6"",random rewiring,,,,-1,,""SWN, RRN"",,-,1600,"
 Paluck_et_al_2016,,experimental,>0.6,seed degree (out),social influence,,,,,EMP(shool),Y,+,431,
 Paluck_et_al_2016,,experimental,>0.6,social referents,social influence,,,3,,EMP(shool),Y,+,431,
 Paluck_et_al_2016,,experimental,>0.6,zealots ,,,,,,EMP(shool),Y,+,431,
@@ -85,6 +85,5 @@ Watts_Dodds_2007,,model,>0.6,avg_degree,network connectivity,,,-/+3,,RRN,N,-/+,,
 Xie_et_al_2011,,model,>0.6,population size,population size,,,,,ERN,Y,+,,
 Xie_et_al_2011,,model,>0.6,population size,population size,,,,-3,,Y,-,,
 Xie_et_al_2011,,model,>0.6,population size,population size,,,,,BA,Y,+,,
-Zhu et al 2019,,model,>0.6,information transmission probability,information density,,,3,,"ER-ER, ER-SF, SF-SF",,+,1000,
+"Zhu et al 2019,,model,>0.6,information transmission probability,information density,,,3,,""ER-ER, ER-SF, SF-SF"",,+,1000,"
 Fink et al ,,observational,>0.6,clustering,,,,,,EMP(twitter),,+,,
-,,,,,,,,49,,,0.2363636364,,,

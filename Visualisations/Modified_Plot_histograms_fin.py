@@ -16,22 +16,42 @@ def harmonize_ref(ref):
     return ref
 
 def load_and_process_data(file_path):
+    """Loads, processes, and filters the data from the specified file path"""
     df = pd.read_csv(file_path)
     df['harmonized_ref'] = df['ref'].apply(harmonize_ref)
     
     harmonized_balanced_dfs = []
     max_experimental_count = df[df['type'] == 'experimental'].groupby('harmonized_ref').size().max()
+
     for harmonized_ref, group in df.groupby('harmonized_ref'):
+        # Separate the group into rows with NaN in 'attribute' or 'value' and rows without NaN in these columns.
+        nan_rows = group[group[['attribute', 'value']].isna().any(axis=1)]
+        non_nan_rows = group.dropna(subset=['attribute', 'value'])
+        
+        # For non-NaN rows, drop duplicates based on 'tipping_point_c_t' and 'magnitude'.
+        non_nan_rows = non_nan_rows.drop_duplicates(subset=['tipping_point_c_t', 'magnitude'])
+        
+        # Concatenate the nan_rows and the filtered non_nan_rows back into the group.
+        group = pd.concat([nan_rows, non_nan_rows], ignore_index=True)
+        
         experimental_group = group[group['type'] == 'experimental']
         modelling_group = group[group['type'] != 'experimental'].copy()
         modelling_group['type'].fillna('modelling', inplace=True)
+        
         if len(modelling_group) > max_experimental_count:
             modelling_group = modelling_group.sample(n=max_experimental_count, random_state=42)
+        
         harmonized_balanced_group = pd.concat([experimental_group, modelling_group], ignore_index=True)
         harmonized_balanced_dfs.append(harmonized_balanced_group)
+
     harmonized_balanced_df = pd.concat(harmonized_balanced_dfs, ignore_index=True)
     harmonized_balanced_df['type'] = harmonized_balanced_df['type'].apply(lambda x: 'empirical' if x == 'experimental' else 'modelling')
+    harmonized_balanced_df['magnitude'] = harmonized_balanced_df['magnitude'].replace('[\\%,]', '', regex=True).apply(pd.to_numeric, errors='coerce')
+    harmonized_balanced_df["type"] = np.where(harmonized_balanced_df["harmonized_ref"] == "Amato_2012.csv", "empirical", harmonized_balanced_df["type"])
+    
     return harmonized_balanced_df
+
+
 
 def plot_final_adjusted_dual_axis_histogram_with_ecdf(df):
     """Plots the final adjusted enhanced normalized histogram with ECDF overlaid on a secondary y-axis with split legends and grid"""
@@ -82,40 +102,12 @@ def plot_final_adjusted_dual_axis_histogram_with_ecdf(df):
     plt.tight_layout()
     plt.savefig("../Figures/critical_histogram.png", dpi=600, bbox_inches = "tight")
     plt.show()
-    
-def calculate_95th_percentile(df, column_name, groupby_column):
-    """
-    Calculates the 95th percentile value of a specified column in the DataFrame,
-    grouped by another column.
-
-    :param df: DataFrame, the input DataFrame
-    :param column_name: str, the name of the column for which to calculate the 95th percentile value
-    :param groupby_column: str, the name of the column by which to group the DataFrame
-    :return: DataFrame, a DataFrame with the 95th percentile values grouped by the specified column
-    """
-    if column_name not in df.columns:
-        raise ValueError(f"{column_name} is not a column in the DataFrame")
-    
-    if groupby_column not in df.columns:
-        raise ValueError(f"{groupby_column} is not a column in the DataFrame")
-
-    grouped = df.groupby(groupby_column)
-    percentiles_95 = grouped[column_name].quantile(0.95).reset_index()
-    
-    return percentiles_95
-
 
 file_path = "../Data/Compiled/Tipping_points_fin_merged_1.csv"
-file_path_fin = '../Data/Compiled/Tipping_threshold_plot.csv' 
+file_path_fin = '../Data/Compiled/Tipping_threshold_plot.csv'
 
-#df = load_and_process_data(file_path)
-
-percentile_95th_value = calculate_95th_percentile(df, 'tipping_point_c_t', "type")
-print("95th percentile value:", percentile_95th_value)
-
-df = pd.read_csv(file_path_fin)
-
-df = df[df["magnitude"] > 0.5]
+df = load_and_process_data(file_path)
+#df.to_csv(file_path_fin, index=False)
 
 plot_final_adjusted_dual_axis_histogram_with_ecdf(df)
 
