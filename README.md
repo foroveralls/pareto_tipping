@@ -33,9 +33,9 @@ the `Analysis`and `Figures` folders respectively.  Please email me (Jordan) if t
 You can download a copy of all the files in this repository by cloning the
 [git](https://git-scm.com/) repository:
 
-    git clone https://github.com/lifrei/It-s_how_we_talk_that_matters.git
+    git clone https://github.com/foroveralls/pareto_tipping.git
 
-or [download a zip archive](https://github.com/lifrei/It-s_how_we_talk_that_matters/archive/refs/heads/main.zip).
+or [download a zip archive]https://github.com/foroveralls/pareto_tipping/archive/refs/heads/master.zip.
 
 ## License
 This project is open-source, and the data is made available under the terms of the Creative Commons Attribution 4.0 International (CC BY 4.0) license. By using or referencing the data in this repository, you agree to comply with the license terms outlined below.
