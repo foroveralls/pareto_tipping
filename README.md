@@ -13,9 +13,10 @@ This paper has been submitted for publication in Earth System Dynamics: Special 
 
 In this project, we conduct a literature review and intercomparison of modelling and behaviour results in order to identify general trends in social tipping dynamics on social networks.
 Specifically we look at what fraction of a given social group has to engage with a specific norm in order to result in rapid, system wide norm changes.
-| ![](Figures/critical_values.png) |
+
+|<img src="Figures/critical_values.png" alt="Image Description" width="600px" height="600px" />|
 |:--:| 
-| *Comparison of the steady state fraction of tipped individuals with the fraction of individuals at or around a potential tipping point for various simulation and experimental results* |
+| *Ssteady state fraction of tipped individuals vs the fraction of individuals at or around a potential tipping point for various simulation and experimental results* |
 
 ## Datasets 
 The compiled datasets to produce all figures in the manuscript are located in the `Compiled` folder.
