@@ -11,7 +11,7 @@ Ilona M Otto
 
 This paper has been submitted for publication in Earth System Dynamics: Special issue on tipping points 
 
-In this project, we conduct a literature review and intercomparison of modelling and behaviour results in order to identify general trends in social tipping dynamics on social networks.
+In this project, we conduct a literature review and intercomparison of modelling and empirical results in order to identify general trends in social tipping dynamics on social networks.
 Specifically we look at what fraction of a given social group has to engage with a specific norm in order to result in rapid, system wide norm changes.
 
 |<img src="Figures/critical_values.png" alt="Image Description" width="600px" height="600px" />|
