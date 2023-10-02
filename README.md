@@ -20,14 +20,13 @@ Specifically we look at what fraction of a given social group has to engage with
 
 ## Datasets 
 The compiled datasets to produce all figures in the manuscript are located in the `Compiled` folder.
-Data used to make the main figures Fig. 6 and Fig. 7 in the manuscript are in `Tipping_threshold_plot.csv` and 'Tipping_points_fin_merged_1.csv' respectively. 
-Figures 4 and 5 are made with 'The Pareto effect in tipping social networks Tipping Data - Tipping_Data'. Data for Table 4. are in `The Pareto effect in tipping social networks Tipping Data - Sheet_main_fig.csv`.
-
+Data used to make the main figures Fig. 6 and Fig. 7 in the manuscript are in `Tipping_threshold_plot.csv` and `Tipping_points_fin_merged_1.csv` respectively. 
+Figures 4 and 5 are made with `The Pareto effect in tipping social networks Tipping Data - Tipping_Data`. Data for Table 4. are in `The Pareto effect in tipping social networks Tipping Data - Sheet_main_fig.csv`.
 
 ## Software implementation
 
 All source code used to generate the results and figures in the paper are in
-the `Analysis`and `Figures` folders respectively.  Please email me (Jordan) if there are any questions as some scripts and data are still incomplete and some cleaning is still required.
+the `Analysis`and `Figures` folders respectively.  Please email me (Jordan) if there are any questions as some scripts and data are still incomplete and some cleaning is still required
 
 ## Getting the code
 
