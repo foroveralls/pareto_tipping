@@ -1,0 +1,39 @@
+Citation,Citation,Network_Topology,Key_Mechanisms,Supplementary_Mechanisms,Publication_Year
+Andreoni et al.,Andreoni et al. (2021),empirical,"switching payoffs, switching threshold, ","personal preferences, public awareness of preferences, time-scale",2021
+Amato et al.,Amato et al. (2018),empirical(conversation network),"policy (institutional intervention), commited activists",informal institutions,2018
+Centola et al.,Centola et al. (2018),complete,"coordination payoffs, commited minority size","indivdual memory length, population size",2018
+Centola ,Centola  (2013),"CL, RRN","jointness of supply (coordination payoff), homophilly",network structure,2013
+Baronchelli et al. ,Baronchelli et al.  (2006),complete,system size,scaling relations,2006
+Xie et al.,Xie et al. (2011),"ER, BA, complete",network topology,"immune nodes, critical minority size",2011
+Castilla-Rho et al.,Castilla-Rho et al. (2017),Grid,"""zealots"" - rule followers, group norm enforcement (pressure to conform)","network connectedness - -average degree, group size",2017
+Paluck et al. ,Paluck et al.  (2015),empirical (school),"characteristics of seeds, out-degree of seeds",zealots,2015
+Wiedermann et al. ,Wiedermann et al.  (2020),ER,"switching threshold distribution, fraction of acting individuals",average degree,2020
+Karsai et al. ,Karsai et al.  (2016),empirical (skype),"immune nodes, switching thresholds",constant flow of innovators,2016
+"Watts, Duncan J.","Watts, Duncan J. (2002)",scale-free,influence of seed nodes,degree/threshold heterogeneity ,2002
+Faribi & Holme,Faribi & Holme (2013),"empirical  (internet community), ER",network temporality,switching threshold ,2013
+Nishioka & Hasegawa,Nishioka & Hasegawa (2022),"ER, empirical (facebook)","switching thresholds, influence of seed nodes","clustering, network typology",2022
+Lacopini et al. ,Lacopini et al.  (2022),empirical (various),"social influence of seed nodes, stubborness",higher order network stuctures,2022
+"Krönke et al, ","Krönke et al,  (2020)","ER, BA, WS, empirical (various)","clustering, recopricity",network topology ,2020
+Karsai et al.,Karsai et al. (2014),"empirical (skype), scale-free","GDP, press liberty",network topology ,2014
+Barash et al.,Barash et al. (2012),"lattice, power-law, small world","long-range-ties, influence of seed nodes",network topology ,2012
+Bakshy et al.,Bakshy et al. (2011),empirical (twitter),"social influence (spreader), URL type","content categories, interest, feeling",2011
+Han et al. ,Han et al.  (2020),"power-law, empirical","preferential contact of nodes (small vs large degree), ifnormation transmission","population size, mean degree",2020
+Jin & Yu,Jin & Yu (2021),"ER, BA, HK, lattice, SW, random","global information, information sources",network topology ,2021
+Zhu et al.,Zhu et al. (2019),"ER-ER, ER-SF, SF-SF",network heterogeneity,threshold distribution,2019
+Efferson et al.,Efferson et al. (2020),"Homophilus, complete, RRN","switching threshold heterogeneity, coordinatinon/switching payoff","cultural identity, group norm",2020
+Hisashi et al.,Hisashi et al. (2006),"Lattice, SF, RRN, cycle","ratio of payoff to degree, network topology",population size,2006
+Min & San Miguel,Min & San Miguel (2023),ER,"rewiring probability, network ""plasticity""  ",average degree,2023
+Watts and Dods,Watts and Dods (2007),random,social influentials,"network density, network degree distribituion",2007
+Damon Centola,Damon Centola (2010),"CL, SWN ","homophilly, network topology, exposure count",clustering,2010
+Damon Centola,Damon Centola (2011),"ER, SF, SWN, empirical ","homophilly, network topology",node centrality,2011
+Gizem et al. ,Gizem et al.  (2018),"L, SWN, ER","network structure, social influence (key nodes)","clustering, degree distribution",2018
+Okada et al.,Okada et al. (2022),"L, SWN, RRN","network structure, trust, density",polarisation,2022
+Ehret et al.,Ehret et al. (2022),complete,group identity,"preference distribution, population heteregeneity",2022
+Hodas et al.,Hodas et al. (2014),empirical(twitter),"social influentials, information density","clustering, intensity of exposure",2014
+Belloti et al.,Belloti et al. (2023),"empirical(Twitter, Digg)","frequency of exposure to contagion, household exposure, trust","weak ties, social influentials",2023
+Christakis & Fowler,Christakis & Fowler (2008),"empirical(friendship, smokers network)","trust, social proximitys, social tie strength","social influentials (education),clustering",2008
+Fowler & Christakis ,Fowler & Christakis  (2008),empirical(friendship),"trust, social proximity, social tie strengh",physical distance,2008
+Christakis & Fowler,Christakis & Fowler (2007),empirical(friendship),"trust, social proximity, social tie strength",spouse,2007
+Centola & Baronchelli,Centola & Baronchelli (2015),empirical ,network topology,network size,2015
+Bond et al,Bond et al (2012),empirical(facebook),"social tie strength, geographic proximity",weak ties,2012
+Fink et al ,Fink et al  (2015),empirical(twitter),"thresholds, clustering",,2015

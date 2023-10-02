@@ -87,7 +87,7 @@ def plot_effect_cascade_success(effect_cascade_data, size_mapping_legend):
     
 def plot_effect_magnitude(effect_magnitude_data):
     sns.set(style="whitegrid")
-    plt.figure(figsize=(6, 6))
+    plt.figure(figsize=(7, 6))
     ax = plt.gca()
     variables = effect_magnitude_data['variable'].unique()
     symbols = {'+': 0, '-': 1, '±': 2}

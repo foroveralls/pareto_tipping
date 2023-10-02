@@ -109,7 +109,7 @@ def main(file_paths, output_file_path, plot=False):
 
 output_file_path = "../Data/Compiled/Tipping_points_fin_merged_1.csv"
 #additional_columns = ['topology', 'magnitude']  # Add any additional columns needed
-plot = True # Set to True if you want to plot graphs for each trajectory
+plot = True # Set to True to plot graphs for each trajectory
 
 if __name__ == "__main__":
     final = main(file_paths, output_file_path, plot = plot)

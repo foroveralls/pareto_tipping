@@ -10,8 +10,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Initialize figures and axes for subplots
-fig, axes = plt.subplots(1, 5, figsize=(25, 5))
-fig.suptitle("Network Types", fontsize=20)
+fig, axes = plt.subplots(1, 5, figsize=(15, 4))
+#fig.suptitle("Network Types", fontsize=20)
 
 # Generate and plot Small-World Network
 small_world = nx.watts_strogatz_graph(100, 4, 0.1)
@@ -38,4 +38,8 @@ clustered_lattice = nx.watts_strogatz_graph(100, 4, 0)
 nx.draw(clustered_lattice, ax=axes[4], node_size=50, node_color='orange', with_labels=False)
 axes[4].set_title("Clustered Lattice")
 
+plt.tight_layout(pad=1.5, w_pad=0.5, h_pad=1.5)
+plt.savefig("../Figures/networks.png", dpi = 600 )
 plt.show()
+
+
