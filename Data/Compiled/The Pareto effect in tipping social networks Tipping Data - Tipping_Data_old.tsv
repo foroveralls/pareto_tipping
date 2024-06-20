@@ -63,7 +63,7 @@ Centola_2013		model	>0.6	Random rewiring				-3		RRN, CL	Y	-
 Kroenke_et_al_2022		model/observational	>0.6	Random rewiring				-3		WS	Y	-	100	fractional_threshold
 Min_Miguel_2023		model	>0.6	Random rewiring				-/+1		ER	N	-/+	100000	
 Okada_et_al_2022		model 	>0,6	Random rewiring				-1		SWN, RRN	Y	-	1600	
-Paluck_et_al_2016		experimental	>0.6	Seed degree (out)	Social influence					EMP(shool)	Y	+	431	
+Paluck_et_al_2016		experimental	>0.6	Seed degree (out)	social influence					EMP(shool)	Y	+	431	
 Watts_Dodds_2007		model/observational	>0.6	Seed social influence	Trust			1		RRN	Y	+		
 Nishioka_ Hasegawa_2022		model	>0.6	Social influence of seed nodes	Trust					EMP(facebook), ERRG	Y	+	4048	
 Christakis & Fowler_a		observational	NA	Social proximity						EMP(smokers networks)	Y	+	12067	
@@ -87,6 +87,3 @@ Belloti et al.		experimental	NA	Trust (in group)	Trust			2		EMP(tribal villages,
 Bond et al 2012		experimental	>0.6	Weak ties	Global information			1		EMP(Facebook)	Y	+	61000000	
 Castilla_Rho_et_al_2017		model	>0.5	Zealots 						grid	Y	+		
 Paluck_et_al_2016		experimental	>0.6	Zealots 						EMP(shool)	Y	+	431	
-														
-														
-										2				

@@ -13,7 +13,7 @@ import seaborn as sns
 
 def plot_left_skewed(ax):
     x = np.linspace(0, 1, 1000)
-    ax.plot(x, beta.pdf(x, 8, 1), color='black', linewidth=0.5)
+    ax.plot(x, beta.pdf(x, 8, 1), color='black', linewidth=1)
     ax.fill_between(x, beta.pdf(x, 8, 1), where=(x >= 0.85) & (x <= 0.95), color='gray', alpha=0.5)
     ax.set_title('(a)', loc='center')
     ax.grid(False)
@@ -24,7 +24,7 @@ def plot_normal(ax):
     x_high = norm.ppf(0.999)
     x = np.linspace(x_low, x_high, 1000)
     x_transformed = (x - x_low) / (x_high - x_low)
-    ax.plot(x_transformed, norm.pdf(x, 0, 1), color='black', linewidth=0.5)
+    ax.plot(x_transformed, norm.pdf(x, 0, 1), color='black', linewidth=1)
     ax.fill_between(x_transformed, norm.pdf(x, 0, 1), where=(x_transformed >= 0.25) & (x_transformed <= 0.75), color='gray', alpha=0.5)
     ax.set_title('(b)', loc='center')
     ax.grid(False)
@@ -32,7 +32,7 @@ def plot_normal(ax):
 
 def plot_right_skewed(ax):
     x = np.linspace(0, 1, 1000)
-    ax.plot(x, beta.pdf(x, 1, 8), color='black', linewidth=0.5)
+    ax.plot(x, beta.pdf(x, 1, 8), color='black', linewidth=1)
     ax.fill_between(x, beta.pdf(x, 1, 8), where=(x >= 0.05) & (x <= 0.15), color='gray', alpha=0.5)
     ax.set_title('(c)', loc='center')
     ax.grid(False)
@@ -51,12 +51,16 @@ def main():
         ax.spines['right'].set_visible(False)
         ax.spines['top'].set_visible(False)
         
+    
+    # plt.setp(axs, ylabel= ("f(x)"), 
+    #          xlabel =(r"Individual threshold $\phi$"))
 
-
+     # Set the main labels for the entire figure
+    fig.supxlabel(r"Individual threshold: $\phi$", fontsize = 16)
+    fig.supylabel("Density: f(x)", fontsize = 16)
 
 if __name__ == "__main__":
     main()
-
     plt.tight_layout()
     plt.savefig("../Figures/ditributinons final.png", dpi=600)
     plt.show()

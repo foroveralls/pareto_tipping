@@ -63,6 +63,7 @@ def plot_data(df):
     
     
     plt.tight_layout()
+    plt.show()
     
     # Show the integrated plot with the final modifications
     plt.savefig("../Figures/critical_values.png", dpi=600 )
@@ -76,5 +77,5 @@ file_path_fin = '../Data/Compiled/Tipping_threshold_plot.csv'
 
 #df = load_and_process_data(file_path)
 df = pd.read_csv(file_path_fin)
-#plot_data(df)
+plot_data(df)
 

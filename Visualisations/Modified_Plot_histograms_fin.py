@@ -51,15 +51,13 @@ def load_and_process_data(file_path):
     
     return harmonized_balanced_df
 
-
-
 def plot_final_adjusted_dual_axis_histogram_with_ecdf(df):
     """Plots the final adjusted enhanced normalized histogram with ECDF overlaid on a secondary y-axis with split legends and grid"""
     palette = sns.color_palette("husl", 2)
     type_palette = {'empirical': palette[0], 'modelling': palette[1]}
     
     # Initialize the figure and the primary axis
-    fig, ax1 = plt.subplots(figsize=(10,6))
+    fig, ax1 = plt.subplots(figsize=(9.4, 6.8))
     
     # Plotting an enhanced normalized histogram on the primary y-axis
     hist = sns.histplot(data=df, x='tipping_point_c_t', hue='type', multiple="dodge", 
@@ -88,14 +86,12 @@ def plot_final_adjusted_dual_axis_histogram_with_ecdf(df):
     # Labeling the secondary y-axis and adding title
     ax2.set_ylabel('Proportion (ECDF)')
     
-    
     # Extracting legend handles and labels for histogram
     hist_legend_labels = [label.get_text() for label in hist.legend_.get_texts()]
     hist_legend_handles = hist.legend_.get_patches()
     
-    # Creating two separate legends and placing them on top of the plot
-    fig.legend(ecdf_lines, [line.get_label() for line in ecdf_lines], loc='upper left', bbox_to_anchor=(0,1.1))
-    fig.legend(hist_legend_handles, hist_legend_labels, loc='upper right', bbox_to_anchor=(1,1.1))
+    # Creating separate legend for ECDF and positioning it
+    fig.legend(ecdf_lines, [line.get_label() for line in ecdf_lines], loc='center',  bbox_to_anchor=[0.74, 0.53])
     
     # Removing the original histogram legend
     ax1.get_legend().remove()
@@ -110,4 +106,3 @@ df = load_and_process_data(file_path)
 #df.to_csv(file_path_fin, index=False)
 
 plot_final_adjusted_dual_axis_histogram_with_ecdf(df)
-
