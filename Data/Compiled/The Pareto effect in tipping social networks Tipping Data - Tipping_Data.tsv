@@ -33,7 +33,7 @@ Centola_2011		experimental	>0,6	Homophily				3		L, SWN	Y	+	72
 Centola_2013		model	>0.6	Homophily				3		RRN, CL	Y	+		
 Efferson_et_al_2020		model/empirical	>0.6	Homophily				-3			N	-	100,500	
 Efferson_et_al_2020		model/empirical	>0.6	In-group conformity				-/+2			N	-/+	100,500	
-Zhu et al 2019		model	>0.6	Information transmission probability	Information density			3		ER-ER, ER-SF, SF-SF	Y	+	1000	
+Zhu et al 2019		model	>0.6	Information transmission prob.	Information density			3		ER-ER, ER-SF, SF-SF	Y	+	1000	
 Han et al 2020		observational/model	>0.6	Information transmission rate	Information density			3		Power law, EMP(WWW)	Y	+	1000	
 Centola_2013		model	>0.6	Jointness of supply	Switching pay off	other					Y	+		
 Centola & Baronchelli_2015		experimental	>0.6	Lattice				3		complete	Y	+	24, 48, 96	
