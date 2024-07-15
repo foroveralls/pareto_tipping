@@ -6,7 +6,7 @@ import numpy as np
 # File paths
 filepath = "../Data/Compiled/The Pareto effect in tipping social networks Tipping Data - Tipping_Data.tsv"
 
-palette = sns.color_palette("husl", 2)
+palette = sns.color_palette("colorblind", 2)
 
 def to_numeric_magnitude(value):
     try:
@@ -64,7 +64,7 @@ def plot_effect_cascade_success(effect_cascade_data, size_mapping_legend, ax):
     sns.set(style="whitegrid")
     
     # Reverse the color mapping
-    color_mapping = {'+': palette[1], '-': palette[0], '-/+': 'purple', 'n': 'gray'}
+    color_mapping = {'+': palette[0], '-': palette[1], '-/+': 'purple', 'n': 'gray'}
     
     sns.scatterplot(x="effect_cascade_success", y="plotting_variable", 
                     size="size_category", sizes=size_mapping_legend, 
@@ -88,7 +88,7 @@ def plot_effect_magnitude(effect_magnitude_data, ax):
     variables = effect_magnitude_data['variable'].unique()
     symbols = {'+': 0, '-': 1, '±': 2}
     y_positions = {variable: i * 3 for i, variable in enumerate(variables)}
-    color_mapping = {'+': palette[1], '-': palette[0], '±': 'gray'}
+    color_mapping = {'+': palette[0], '-': palette[1], '±': 'gray'}
     size_mapping = {1.0: 50, 2.0: 100, 3.0: 150}
     x_jitter = 0.2
     y_jitter = 0

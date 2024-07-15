@@ -63,11 +63,10 @@ def plot_data(df):
     
     
     plt.tight_layout()
-    plt.show()
-    
-    # Show the integrated plot with the final modifications
-    plt.savefig("../Figures/critical_values.png", dpi=600 )
 
+    # Show the integrated plot with the final modifications
+    plt.savefig("../Figures/critical_values.png", dpi=300 )
+    plt.show()
 
 #%%
 file_path = '../Data/Compiled/Tipping_points_fin_merged_1.csv'  
