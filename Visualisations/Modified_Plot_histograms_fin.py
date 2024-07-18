@@ -99,10 +99,11 @@ def plot_final_adjusted_dual_axis_histogram_with_ecdf(df):
     plt.savefig("../Figures/critical_histogram.png", dpi=600, bbox_inches = "tight")
     plt.show()
 
-file_path = "../Data/Compiled/Tipping_points_fin_merged_1.csv"
-file_path_fin = '../Data/Compiled/Tipping_threshold_plot.csv'
+file_path = '../Data/Compiled/Tipping_threshold_plot.csv'
 
-df = load_and_process_data(file_path)
-#df.to_csv(file_path_fin, index=False)
+df = pd.read_csv(file_path)
+#df = load_and_process_data(file_path)
+#df.to_csv(file_path_fin, index=False
+df_unique = df.drop_duplicates(subset=['tipping_point_c_t', 'magnitude', 'type'])
 
-plot_final_adjusted_dual_axis_histogram_with_ecdf(df)
+plot_final_adjusted_dual_axis_histogram_with_ecdf(df_unique)

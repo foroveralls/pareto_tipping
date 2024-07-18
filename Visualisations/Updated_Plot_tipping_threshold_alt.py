@@ -69,12 +69,23 @@ def plot_data(df):
     plt.show()
 
 #%%
-file_path = '../Data/Compiled/Tipping_points_fin_merged_1.csv'  
+#file_path = '../Data/Compiled/Tipping_points_fin_merged_1.csv'  
 file_path_fin = '../Data/Compiled/Tipping_threshold_plot.csv'  
 
 #df.to_csv(file_path_fin, index=False)
 
 #df = load_and_process_data(file_path)
 df = pd.read_csv(file_path_fin)
-plot_data(df)
+df_unique = df.drop_duplicates(subset=['tipping_point_c_t', 'magnitude', 'type'])
+
+ # Print unique data info
+print("\nUnique data shape:", df_unique.shape)
+print("Unique type counts:")
+print(df_unique['type'].value_counts())
+
+# Print unique values in the 'type' column
+print("\nUnique values in 'type' column:")
+print(df_unique['type'].unique())
+    
+plot_data(df_unique)
 

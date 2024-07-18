@@ -11,11 +11,12 @@ from scipy.stats import beta, norm
 import seaborn as sns
 
 
+pad = 10
 def plot_left_skewed(ax):
     x = np.linspace(0, 1, 1000)
     ax.plot(x, beta.pdf(x, 8, 1), color='black', linewidth=1)
     ax.fill_between(x, beta.pdf(x, 8, 1), where=(x >= 0.85) & (x <= 0.95), color='gray', alpha=0.5)
-    ax.set_title('(a)', loc='center')
+    ax.set_title('(a)', loc='left', pad = pad)
     ax.grid(False)
 
 
@@ -26,7 +27,7 @@ def plot_normal(ax):
     x_transformed = (x - x_low) / (x_high - x_low)
     ax.plot(x_transformed, norm.pdf(x, 0, 1), color='black', linewidth=1)
     ax.fill_between(x_transformed, norm.pdf(x, 0, 1), where=(x_transformed >= 0.25) & (x_transformed <= 0.75), color='gray', alpha=0.5)
-    ax.set_title('(b)', loc='center')
+    ax.set_title('(b)', loc='left', pad = pad)
     ax.grid(False)
 
 
@@ -34,7 +35,7 @@ def plot_right_skewed(ax):
     x = np.linspace(0, 1, 1000)
     ax.plot(x, beta.pdf(x, 1, 8), color='black', linewidth=1)
     ax.fill_between(x, beta.pdf(x, 1, 8), where=(x >= 0.05) & (x <= 0.15), color='gray', alpha=0.5)
-    ax.set_title('(c)', loc='center')
+    ax.set_title('(c)', loc='left', pad = pad)
     ax.grid(False)
 
 
@@ -62,7 +63,7 @@ def main():
 if __name__ == "__main__":
     main()
     plt.tight_layout()
-    plt.savefig("../Figures/ditributinons final.png", dpi=600)
+    plt.savefig("../Figures/distributinons_final.svg")
     plt.show()
 
 

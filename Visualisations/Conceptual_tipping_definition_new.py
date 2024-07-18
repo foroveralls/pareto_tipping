@@ -48,21 +48,28 @@ ax0.set_ylabel('$F_t\\to \\infty$')
 # Get the Line2D objects from the Axes
 lines = ax0.get_lines()
 ax0.legend([lines[0], lines[1], plt.Rectangle((0,0),1,1,fc='blue', alpha=0.4)],
-           ['Linear response', 'Non-linear response', 'Social Tipping Zone'],
+           ['Linear response', 'Non-linear response', 'Social tipping zone'],
            loc='upper center', bbox_to_anchor=(0.5, 1.15), ncol=3, fontsize='small')
 
 # Set the limits to start from the origin
 ax0.set_xlim(0, 1.1)
 ax0.set_ylim(0, 1.1)
 
+d2 = np.argmax(second_derivative_logistic(x2))
+
 # Second plot
 sns.lineplot(x=x2, y=logistic(x2), ax=ax1, color='blue', linestyle='-')
-sns.lineplot(x=x2, y=second_derivative_logistic(x2), ax=ax1, color='red', linestyle='--')
+sns.lineplot(x=x2, y=second_derivative_logistic(x2), ax=ax1, color='tomato', linestyle='--')
 ax1.axhline(0.2, color='black', linestyle='--')
 ax1.axhline(0.8, color='black', linestyle='--')
+ax1.axvline(x = np.argmax(second_derivative_logistic(x2))/10, 
+            color = "red",  linewidth = 1, linestyle = 'dotted')
 ax1.text(0.2, 0.13, 'Triggering Phase', fontsize=8, va='center', ha='left')
 ax1.text(0.2, 0.5, 'Tipping Phase', fontsize=8, va='center', ha='left')
 ax1.text(0.2, 0.9, 'Manifestation Phase', fontsize=8, va='center', ha='left')
+
+
+
 
 ax1.set_xlabel('$t$')
 ax1.set_ylabel('$F(t)$')
@@ -73,9 +80,13 @@ ax1.set_ylim(-0.1, 1.1)
 
 # Get the Line2D objects from the Axes
 lines = ax1.get_lines()
-ax1.legend([lines[0], lines[1]],
-           ['Adopters, $F(t)$', "Second Derivative, $F''(t)$"],
-           loc='upper center', bbox_to_anchor=(0.5, 1.15), ncol=2, fontsize='small')
+# ax1.legend([lines[0], lines[1]],
+#            ['Adopters, $F(t)$', "Second Derivative, $F''(t)$"],
+#            loc='upper center', bbox_to_anchor=(0.5, 1.15), ncol=3, fontsize='small')
+            
+ax1.legend([lines[0], lines[1], lines[4]],
+            ['Adopters, $F(t)$', "Second derivative, $F''(t)$", "Tipping point $t_c$" ],
+            loc='upper center', bbox_to_anchor=(0.5, 1.15), ncol=3, fontsize='small')
 # Adjust space between plots and show the figure
 plt.subplots_adjust(wspace=0.2)
 plt.tight_layout()

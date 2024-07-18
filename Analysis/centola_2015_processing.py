@@ -3,83 +3,75 @@ import numpy as np
 import pandas as pd
 import glob
 import os
+from collections import deque
+
+#N = int(filename.split('_')[3].split('.')[0].replace("n", ""))
 
 def process_file(filename):
     topology = filename.split('_')[2]
-    N = filename.split('_')[3].split('.')[0].replace('n', '')
-    
-    try:
-        with open(filename, 'r', encoding='utf-8') as f:
-            lines = f.readlines()
-    except UnicodeDecodeError:
-        with open(filename, 'r', encoding='latin-1') as f:
-            lines = f.readlines()
+    N = int(filename.split('_')[3].split('.')[0].replace("n", ""))
+
+    with open(filename, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
 
     names = []
-    timesteps = []
-    current_timestep = 0
-    unique_names = set()
-
-    for i, line in enumerate(lines):
+    for line in lines:
         parts = line.strip().split()
         if len(parts) == 3:
             name1, name2, _ = parts
-            names.append(name1.lower())
-            names.append(name2.lower())
-            
             if name1.lower() != 'response_not_given':
-                unique_names.add(name1.lower())
+                names.append(name1.lower())
             if name2.lower() != 'response_not_given':
-                unique_names.add(name2.lower())
-            
-            if (i + 1) % 24 == 0:  # Every 24 interactions is a timestep
-                current_timestep += 1
-                timesteps.extend([current_timestep for _ in range(48)])  # 48 name entries per timestep
+                names.append(name2.lower())
 
-    # Calculate name frequencies
-    name_freq = {}
-    for t in range(max(timesteps) + 1):
-        names_at_t = [name for name, timestep in zip(names, timesteps) if timestep == t and name != 'response_not_given']
-        total_names = len(names_at_t)
-        freq = {name: names_at_t.count(name) / total_names for name in set(names_at_t)}
-        name_freq[t] = freq
+    # Calculate name frequencies for each Round Played
+    interactions_per_round = N // 2
+    max_rounds = 40 if N == 48 else 30  # Adjust based on N
+    name_freq = []
+
+    for round in range(min(max_rounds, len(names) // interactions_per_round)):
+        start = round * interactions_per_round
+        end = start + interactions_per_round
+        round_names = names[start:end]
+        total_names = len(round_names)
+        freq = {name: round_names.count(name) / total_names for name in set(round_names) if name != 'response_not_given'}
+        name_freq.append(freq)
+
+    rounds_played = len(name_freq)
 
     # Plot the results
     plt.figure(figsize=(10, 6))
 
-    max_freq_norm = None
-    max_freq = 0
-
+    unique_names = set(name for freq in name_freq for name in freq.keys() if name != 'response_not_given')
     for name in unique_names:
-        freq_over_time = [name_freq[t].get(name, 0) for t in range(max(timesteps) + 1)]
-        plt.plot(range(max(timesteps) + 1), freq_over_time, label=name if max(freq_over_time) > 0.1 else '')
-        
-        if max(freq_over_time) > max_freq:
-            max_freq = max(freq_over_time)
-            max_freq_norm = name
+        freq_over_time = [freq.get(name, 0) for freq in name_freq]
+        plt.plot(range(rounds_played), freq_over_time, label=name if max(freq_over_time) > 0.1 else '')
 
-    plt.xlabel('Rounds')
+    plt.xlabel('Rounds Played')
     plt.ylabel('Norm Frequency')
     plt.title(f'Evolving Ecology of Norms ({N}, {topology.capitalize()})')
     plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+    plt.ylim(0, 1)  # Set y-axis limits from 0 to 1
     plt.tight_layout()
     plt.show()
-    
 
+    # Find the norm with the highest frequency at the end
+    final_freq = name_freq[-1]
+    max_freq_norm = max(final_freq, key=final_freq.get)
+    max_freq = final_freq[max_freq_norm]
 
     # Create dataframe for the norm with highest frequency
     df_list = []
-    for t in range(max(timesteps) + 1):
+    for t, freq in enumerate(name_freq):
         df_list.append({
             'x': t,
-            'y': name_freq[t].get(max_freq_norm, 0),
+            'y': freq.get(max_freq_norm, 0),
             'N': N,
             'Topology': topology,
             'Norm': max_freq_norm
         })
     
     return pd.DataFrame(df_list)
-
 # Process all files
 all_files = glob.glob('../Data/Raw/Experimental/Centola_2015_*_n*.txt')
 all_data = pd.DataFrame()

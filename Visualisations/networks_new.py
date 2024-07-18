@@ -65,7 +65,31 @@ Graph(regular_random, ax=axes[3], node_size=NODE_SIZE, edge_width=EDGE_WIDTH, no
 
 # Generate and plot Clustered Lattice with ring layout
 clustered_lattice = nx.watts_strogatz_graph(NETWORK_SIZE, 4, 0)
-Graph(clustered_lattice, ax=axes[4], node_size=NODE_SIZE, edge_width=EDGE_WIDTH, node_edge_width=0.5, node_layout="circular")
+
+# Create a custom layout
+def custom_circular_layout(G, radius=1, center=None):
+    if center is None:
+        center = (0, 0)
+    
+    pos = nx.circular_layout(G, scale=radius)
+    
+    for i, (node, (x, y)) in enumerate(pos.items()):
+        angle = 2 * np.pi * i / len(G)
+        if i % 2 == 1:  # Every second node
+            # Move it slightly towards the center
+            x = 0.86 * x + 0.15 * center[0]
+            y = 0.86 * y + 0.15 * center[1]
+        pos[node] = (x, y)
+    
+    return pos
+
+# Use the custom layout for the clustered lattice
+custom_layout = custom_circular_layout(clustered_lattice)
+
+# Plot the Clustered Lattice with the custom layout
+Graph(clustered_lattice, ax=axes[4], node_size=NODE_SIZE+3.5, edge_width=EDGE_WIDTH+1.2, 
+      node_edge_width=0.9, node_layout=custom_layout, scale = 1.1)
+#Graph(clustered_lattice, ax=axes[4], node_size=NODE_SIZE, edge_width=EDGE_WIDTH, node_edge_width=0.5, node_layout="circular")
 
 y = 0.21
 # Set titles using fig.text
@@ -76,6 +100,6 @@ fig.text(0.7, y, "Regular Random", ha='center', fontsize=16)
 fig.text(0.9, y, "Clustered Lattice", ha='center', fontsize=16)
 
 plt.tight_layout()
-plt.savefig("../Figures/networks.png", dpi=300, bbox_inches = 'tight')
+plt.savefig("../Figures/networks.svg", dpi=300, bbox_inches = 'tight')
 plt.show()
 

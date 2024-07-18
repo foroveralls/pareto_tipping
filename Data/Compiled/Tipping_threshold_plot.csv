@@ -1,0 +1,104 @@
+ref,tipping_point_c_t,attribute,value,type,magnitude,harmonized_ref
+Amato_2012.csv_traj1,0.17, change,informal_institution,empirical,,Amato_2012.csv
+Amato_2012.csv_traj1,0.17, spelling ,behavior_behaviour,empirical,0.9,Amato_2012.csv
+Amato_2012.csv_traj2,0.35, change,unregulated,empirical,,Amato_2012.csv
+Amato_2012.csv_traj2,0.35, spelling ,rubbish_garbage,empirical,0.76,Amato_2012.csv
+Amato_2012.csv_traj3,0.31, change,formal_institution,empirical,,Amato_2012.csv
+Amato_2012.csv_traj3,0.31, spelling ,quando_cuando,empirical,0.98,Amato_2012.csv
+Amato_2012.csv_traj4,0.17, change,unregulated,empirical,,Amato_2012.csv
+Amato_2012.csv_traj4,0.17, spelling ,se_ra,empirical,0.8,Amato_2012.csv
+Amato_2012.csv_traj5,0.35, change,informal_institution,empirical,,Amato_2012.csv
+Amato_2012.csv_traj5,0.35, spelling ,centre_center,empirical,0.85,Amato_2012.csv
+Andreoni_2021,0.43,,,empirical,1,Andreoni_2021
+Andreoni_2021,0.43,,,empirical,1,Andreoni_2021
+Andreoni_2021,0.23,,,empirical,0.97,Andreoni_2021
+Andreoni_2021,0.23,,,empirical,1,Andreoni_2021
+Andreoni_2021,0.23,,,empirical,0.96,Andreoni_2021
+Andreoni_2021,0.23,,,empirical,1,Andreoni_2021
+Andreoni_2021,0.23,,,empirical,1,Andreoni_2021
+Andreoni_2021,0.4,,,empirical,0.99,Andreoni_2021
+Andreoni_2021,0.4,,,empirical,1,Andreoni_2021
+Andreoni_2021,0.4,,,empirical,1,Andreoni_2021
+Andreoni_2021,0.3,,,empirical,1,Andreoni_2021
+Andreoni_2021,0.3,,,empirical,1,Andreoni_2021
+Andreoni_2021,0.3,,,empirical,1,Andreoni_2021
+Andreoni_2021,0.3,,,empirical,1,Andreoni_2021
+Andreoni_2021,0.3,,,empirical,1,Andreoni_2021
+Andreoni_2021,0.3,,,empirical,1,Andreoni_2021
+Castilla_Rho_et_al_2017,0.4,location,Murray_Darling_Basin_Australia,modelling,0.9,Castilla_Rho_et_al_2017
+Castilla_Rho_et_al_2017,0.2,location,Murray_Darling_Basin_Australia,modelling,0.9,Castilla_Rho_et_al_2017
+Castilla_Rho_et_al_2017,0.1,location,Murray_Darling_Basin_Australia,modelling,0.6,Castilla_Rho_et_al_2017
+Castilla_Rho_et_al_2017,0,location,Murray_Darling_Basin_Australia,modelling,0.2,Castilla_Rho_et_al_2017
+Castilla_Rho_et_al_2017,0.4,location,Central_valley_USA,modelling,0.8,Castilla_Rho_et_al_2017
+Castilla_Rho_et_al_2017,0.2,location,Central_valley_USA,modelling,0.35,Castilla_Rho_et_al_2017
+Castilla_Rho_et_al_2017,0.1,location,Central_valley_USA,modelling,0.2,Castilla_Rho_et_al_2017
+Castilla_Rho_et_al_2017,0,location,Central_valley_USA,modelling,0,Castilla_Rho_et_al_2017
+Castilla_Rho_et_al_2017,0.4,location,Punjab_Pak,modelling,0.7,Castilla_Rho_et_al_2017
+Castilla_Rho_et_al_2017,0.2,location,Punjab_Pak,modelling,0.3,Castilla_Rho_et_al_2017
+Castilla_Rho_et_al_2017,0.1,location,Punjab_Pak,modelling,0.2,Castilla_Rho_et_al_2017
+Castilla_Rho_et_al_2017,0,location,Punjab_Pak,modelling,0,Castilla_Rho_et_al_2017
+Castilla_Rho_et_al_2017,0,location,Punjab_Ind,modelling,0,Castilla_Rho_et_al_2017
+Castilla_Rho_et_al_2017,0.1,location,Punjab_Ind,modelling,0.7,Castilla_Rho_et_al_2017
+Castilla_Rho_et_al_2017,0.2,location,Punjab_Ind,modelling,0.9,Castilla_Rho_et_al_2017
+Castilla_Rho_et_al_2017,0.4,location,Punjab_Ind,modelling,0.9,Castilla_Rho_et_al_2017
+Centola_2018,0.1904761904761904,,,empirical,0.0667,Centola_2018
+Centola_2018,0.2777777777777778,,,empirical,1,Centola_2018
+Centola_2018,0.2068965517241379,,,empirical,0.08,Centola_2018
+Centola_2018,0.3076923076923077,,,empirical,1,Centola_2018
+Centola_2018,0.1923076923076923,,,empirical,0.0526,Centola_2018
+Centola_2018,0.2758620689655172,,,empirical,0.6957,Centola_2018
+Centola_2018,0.1666666666666666,,,empirical,0,Centola_2018
+Centola_2018,0.2666666666666666,,,empirical,0.75,Centola_2018
+Jin_Yu_2021,0.1101,topology,SQL,modelling,1,Jin_Yu_2021
+Jin_Yu_2021,0.4775,topology,SQL,modelling,1,Jin_Yu_2021
+Jin_Yu_2021,0.054,topology,SQL,modelling,1,Jin_Yu_2021
+Jin_Yu_2021,0.0597,topology,SQL,modelling,1,Jin_Yu_2021
+Jin_Yu_2021,0.4095,topology,SWN,modelling,1,Jin_Yu_2021
+Jin_Yu_2021,0.0999,topology,SQL,modelling,1,Jin_Yu_2021
+Jin_Yu_2021,0.0969,topology,SQL,modelling,1,Jin_Yu_2021
+Jin_Yu_2021,0.4381,topology,SWN,modelling,1,Jin_Yu_2021
+Jin_Yu_2021,0.4057,topology,SQL,modelling,1,Jin_Yu_2021
+Jin_Yu_2021,0.4655,topology,SWN,modelling,1,Jin_Yu_2021
+Jin_Yu_2021,0.4595,topology,SQL,modelling,1,Jin_Yu_2021
+Jin_Yu_2021,0.0892,topology,SWN,modelling,1,Jin_Yu_2021
+Krönke_2022_2_N.csv_traj1,0.29,N,16. 5 ,modelling,1,Krönke_2022_2_N.csv
+Krönke_2022_2_N.csv_traj2,0.3,N,128,modelling,1,Krönke_2022_2_N.csv
+Krönke_2022_2_N.csv_traj3,0.26,N,1024,modelling,1,Krönke_2022_2_N.csv
+Lacopini_2022_traj1,0.265,topology,empirical_Lyon_school,modelling,1,Lacopini_2022
+Lacopini_2022_traj2,0.32,topology,empirical_congress_2,modelling,0.9990981369407858,Lacopini_2022
+Lacopini_2022_traj3,0.08,topology,empirical_email_EU_2,modelling,0.9878078963874622,Lacopini_2022
+Lacopini_2022_traj4,0.13,topology,empirical_Thiers_HO_2,modelling,1,Lacopini_2022
+Lacopini_2022_traj5,0.27,topology, empirical_Thiers13,modelling,1,Lacopini_2022
+Lacopini_2022_traj6,0.390482985,topology, empirical_Theirs13_HO,modelling,0.9941044657998872,Lacopini_2022
+Lacopini_2022_traj7,0.2,topology,empirical_email_EU,modelling,0.3618477513794057,Lacopini_2022
+Lacopini_2022_traj8,0.25,topology, empirical_congress_bills,modelling,0.405508128,Lacopini_2022
+Xie et al_2011,0.062430445,topology,ER,modelling,0.209344665,Xie et al_2011
+Xie et al_2011,0.1104585267567853,topology,BA,modelling,0.9967397434154734,Xie et al_2011
+Xie et al_2011,0.062510293,topology,BA,modelling,0.2071337098518448,Xie et al_2011
+Xie et al_2011,0.089767107,k,10,modelling,0.4091398105688312,Xie et al_2011
+Xie et al_2011,0.080212753,N,1000,modelling,0.350053773,Xie et al_2011
+Xie et al_2011,0.062470433,N,10000,modelling,0.2034144427636908,Xie et al_2011
+Xie et al_2011,0.074618272,topology,BA,modelling,0.3171400479355077,Xie et al_2011
+Xie et al_2011,0.089767107,N,400,modelling,0.4091398105688312,Xie et al_2011
+Xie et al_2011,0.019415608,k,10,modelling,0.051225919,Xie et al_2011
+Xie et al_2011,0.072137212,topology, complete,modelling,0.1850112730467379,Xie et al_2011
+Xie et al_2011,0.065954414,topology, complete,modelling,0.1650340891363563,Xie et al_2011
+Xie et al_2011,0.087347355,k,10,modelling,0.5534666045262178,Xie et al_2011
+Xie et al_2011,0.070598585,topology,BA,modelling,0.2543235928246401,Xie et al_2011
+Xie et al_2011,0.084657276,k,10,modelling,0.3563993264300344,Xie et al_2011
+Xie et al_2011,0.029822067,k,10,modelling,0.07557262,Xie et al_2011
+Xie et al_2011,0.053589965,topology, complete,modelling,0.1289184024042575,Xie et al_2011
+Tschofenig_et_al_c_N_traj1,0.206000445,N,5000,modelling,0.88333727,
+Tschofenig_et_al_c_N_traj2,0.204871822,N,5000,modelling,0.903727735,
+Tschofenig_et_al_c_N_traj3,0.194209258,N,5000,modelling,0.936589252,
+Tschofenig_et_al_c_N_traj4,0.167866596,N,5000,modelling,0.950119404,
+Centola_2015_traj1,0.29,N,48,empirical,1,
+Centola_2015_traj2,0.16,N,48,empirical,0.4,
+Centola_2015_traj3,0.19,N,48,empirical,0.3,
+Karsai_2016_traj1,0.29,,,modelling,1,
+Karsai_2016_traj2,0.17,,,modelling,0.72,
+Karsai_2016_traj3,0.09,,,modelling,0.46,
+Hu_Winer_2017_traj1,0.11,,,empirical,1,
+Wiedermann_2020_traj1,0.3,,,modelling,1,
+Wiedermann_2020_traj2,0.225,,,modelling,1,
+Wiedermann_2020_traj3,0.125,,,modelling,1,
