@@ -13,7 +13,7 @@ import numpy as np
 #%%
 
 # Define sigmoid function
-def sigmoid(x, k=25, x0=0.25):
+def sigmoid(x, k=30, x0=0.2):
     return 1 / (1 + np.exp(-k * (x - x0)))
 # Define logistic function
 def logistic(x, x0=5, k=1):
@@ -43,7 +43,7 @@ sns.lineplot(x=x1, y=x1, ax=ax0, color='black', linestyle='--')
 sns.lineplot(x=x1, y=sigmoid(x1), ax=ax0, color='Black', linestyle='-')
 ax0.fill_between(x1, 0.5, 1, where=(x1 < 0.5), color='blue', alpha=0.4)
 ax0.set_xlabel('$F(t)$')
-ax0.set_ylabel('$F_t\\to \\infty$')
+ax0.set_ylabel('$F_{t\\to \\infty}$')
 
 # Get the Line2D objects from the Axes
 lines = ax0.get_lines()
@@ -65,8 +65,8 @@ ax1.axhline(0.8, color='black', linestyle='--')
 ax1.axvline(x = np.argmax(second_derivative_logistic(x2))/10, 
             color = "red",  linewidth = 1, linestyle = 'dotted')
 ax1.text(0.2, 0.13, 'Triggering Phase', fontsize=8, va='center', ha='left')
-ax1.text(0.2, 0.5, 'Tipping Phase', fontsize=8, va='center', ha='left')
-ax1.text(0.2, 0.9, 'Manifestation Phase', fontsize=8, va='center', ha='left')
+ax1.text(3.8, 0.5, 'Tipping Phase', fontsize=8, va='center', ha='left')
+ax1.text(6, 0.9, 'Manifestation Phase', fontsize=8, va='center', ha='left')
 
 
 
@@ -90,6 +90,6 @@ ax1.legend([lines[0], lines[1], lines[4]],
 # Adjust space between plots and show the figure
 plt.subplots_adjust(wspace=0.2)
 plt.tight_layout()
-plt.savefig("../Figures/concept_tipping_1.png", dpi=600 )
+plt.savefig("../Figures/concept_tipping_1.pdf", dpi=300 )
 plt.show()
 

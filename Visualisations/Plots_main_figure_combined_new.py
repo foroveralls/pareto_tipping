@@ -44,6 +44,7 @@ def find_ecdf_value(data, ecdf_point):
     Returns:
     float: The data value at which the ECDF reaches the given point.
     """
+  
     sorted_data = np.sort(data)
     n = len(sorted_data)
     ecdf_values = np.arange(1, n + 1) / n
@@ -111,7 +112,7 @@ def plot_scatter(df, ax_joint, ax_marg_x, ax_marg_y, show_sigmoid_fit=False):
     
         # Calculate and plot average tipping threshold
     avg_tipping_threshold = df['tipping_point_c_t'].mean()
-    ax_joint.axvline(x=avg_tipping_threshold, color='purple', linestyle='--', linewidth=1.5, 
+    ax_joint.axvline(x=avg_tipping_threshold, color='purple', linestyle='dotted', linewidth=1.5, 
                      label=f'Avg. λ = {avg_tipping_threshold:.3f}')
     
     # # Add text annotation for average
@@ -122,11 +123,11 @@ def plot_scatter(df, ax_joint, ax_marg_x, ax_marg_y, show_sigmoid_fit=False):
     ax_joint.set_xlim([0, 1])
     ax_joint.set_ylim([0, 1.1])
     ax_joint.set_xlabel('$\lambda$', fontsize=16)
-    ax_joint.set_ylabel('$n/N$', fontsize=16)
+    ax_joint.set_ylabel('$F_{\infty}$', fontsize=16)
     ax_joint.tick_params(labelsize=16)
     
     handles, labels = ax_joint.get_legend_handles_labels()
-    ax_joint.legend(handles=handles, labels=labels, loc='lower right', fontsize=14, frameon=True, framealpha=0.8, borderpad=1)
+    ax_joint.legend(handles=handles, labels=labels, loc='lower right', fontsize=14, frameon=True, framealpha=0.8, borderpad=0.6)
     ax_marg_x.axis('off')
     ax_marg_y.axis('off')
 def plot_histogram(df, ax1, ax2):
@@ -143,12 +144,13 @@ def plot_histogram(df, ax1, ax2):
     df['type'] = df['type'].replace('experimental', 'empirical')
     
     
-    # # Calculate average tipping threshold
-    # avg_tipping_threshold = df['tipping_point_c_t'].mean()
+    # Calculate average tipping threshold
+    avg_tipping_threshold = df['tipping_point_c_t'].mean()
+    print(avg_tipping_threshold)
 
-    # # Plot vertical line for average tipping threshold
-    # ax1.axvline(x=avg_tipping_threshold, color='red', linestyle='--', linewidth=2, label=f'Average λ = {avg_tipping_threshold:.3f}')
-    # ax2.axvline(x=avg_tipping_threshold, color='red', linestyle='--', linewidth=2)
+    # Plot vertical line for average tipping threshold
+    avg_line = ax1.axvline(x=avg_tipping_threshold, color='purple', linestyle='dotted', linewidth=2, label=f'Average λ = {avg_tipping_threshold:.3f}')
+    #ax2.axvline(x=avg_tipping_threshold, color='red', linestyle='--', linewidth=2)
 
     
     # Debugging: Print unique values in the 'type' column
@@ -178,12 +180,9 @@ def plot_histogram(df, ax1, ax2):
     ax1.get_legend().remove()
     ax2.grid(False)
     
-    # Update legend to include the average line
-    # handles, labels = ax1.get_legend_handles_labels()
-    # ax1.legend(handles=handles, labels=labels, loc='upper left', fontsize=12)
 
   
-    return ecdf_lines
+    return ecdf_lines, avg_line
 
 #%%
 def main():
@@ -212,7 +211,7 @@ def main():
     show_sigmoid = False
     
     fig = plt.figure(figsize=(16, 7))
-    gs = fig.add_gridspec(2, 4, height_ratios=[1.2, 5], width_ratios=[3.8, 0.8, 0.5, 4])   # Adjusted width of y-axis marginal
+    gs = fig.add_gridspec(2, 4, height_ratios=[1.2, 5], width_ratios=[3.8, 0.8, 0.5, 4.5])  # Increased last value from 4 to 4.5  # Adjusted width of y-axis marginal
 
     
     ax_joint = fig.add_subplot(gs[1, 0])
@@ -223,13 +222,20 @@ def main():
     
     ax_hist = fig.add_subplot(gs[1, 3])
     ax_ecdf = ax_hist.twinx()
-    ecdf_lines = plot_histogram(df_unique, ax_hist, ax_ecdf)
+    
+    
+    ecdf_lines, avg_line = plot_histogram(df_unique, ax_hist, ax_ecdf)
+
+    # Merge legends
+    all_lines = ecdf_lines + [avg_line]
+    all_labels = [line.get_label() for line in all_lines]
+    
+    fig.legend(all_lines, all_labels, 
+               loc='center right', bbox_to_anchor=(0.73, 0.70), borderpad = 0.6, framealpha=0.8, ncol=1, fontsize=14)
     
     fig.text(0.05, 0.95, '(a)', fontsize=16, fontweight='bold')
-    fig.text(0.60, 0.95, '(b)', fontsize=16, fontweight='bold')  # Adjusted position of (b) label
+    fig.text(0.538, 0.95, '(b)', fontsize=16, fontweight='bold')  # Adjusted position of (b) label
     
-    fig.legend(ecdf_lines, [line.get_label() for line in ecdf_lines], 
-               loc='center right', bbox_to_anchor=(0.94, 0.42), ncol=1, fontsize=16)
     
     plt.tight_layout()
     plt.subplots_adjust(wspace=0.05)
@@ -244,23 +250,38 @@ def main():
     ax_hist.yaxis.tick_left()
     ax_hist.xaxis.tick_bottom()
 
-    plt.savefig("../Figures/combined_plots.svg", bbox_inches="tight") #dpi=600,
+    plt.savefig("../Figures/combined_plots.pdf", bbox_inches="tight", dpi = 300) #dpi=600,
     plt.show()
 
 if __name__ == "__main__":
     main()
     
 #%%
+file_path_scatter = "../Data/Compiled/Tipping_threshold_plot.csv"
 
-# data_em = df_unique[df_unique['type'] == 'empirical']['tipping_point_c_t']
+df_full = pd.read_csv(file_path_scatter)
 
-# data_mod = df_unique[df_unique['type'] == 'modelling']['tipping_point_c_t']
-# point = 0.95
-# ecdf_value = find_ecdf_value(data_mod, point)
+# Remove duplicate tipping points
+df_unique = df_full.drop_duplicates(subset=['tipping_point_c_t', 'magnitude', 'type'])
 
-# avg_vals = data_mod.mean(), data_em.mean() 
-# total = df_unique["tipping_point_c_t"].mean()
-# print(f"ECDF value at {point}: {ecdf_value}")
+df_unique = df_unique[df_unique['magnitude'] > 0.5]
+
+data_em = df_unique[df_unique['type'] == 'empirical']['tipping_point_c_t']
+
+data_mod = df_unique[df_unique['type'] == 'modelling']['tipping_point_c_t']
+
+point = 0.95
+ecdf_value = find_ecdf_value(df_unique['tipping_point_c_t'], point)
+
+smallest = min(df_unique = df_unique[df_unique['magnitude'] > 0.5])
+
+modelling_ecdf, emp_ecdf = [find_ecdf_value(x, 0.95) for x in [data_mod, data_em]]
+(lambda x: find_ecdf_value(x, point), )
+
+modelling_ecdf, emp_ecdf = [evaluate_ecdf(x, 0.25) for x in [data_mod, data_em]]
+avg_vals = data_mod.mean(), data_em.mean() 
+total = df_unique["tipping_point_c_t"].mean()
+print(f"ECDF value at {point}: {ecdf_value}")
 
 
 

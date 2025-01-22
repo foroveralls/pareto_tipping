@@ -100,6 +100,6 @@ fig.text(0.7, y, "Regular Random", ha='center', fontsize=16)
 fig.text(0.9, y, "Clustered Lattice", ha='center', fontsize=16)
 
 plt.tight_layout()
-plt.savefig("../Figures/networks.svg", dpi=300, bbox_inches = 'tight')
+plt.savefig("../Figures/networks.pdf", dpi=300, bbox_inches = 'tight')
 plt.show()
 

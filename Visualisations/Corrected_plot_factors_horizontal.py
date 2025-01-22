@@ -4,7 +4,7 @@ import seaborn as sns
 import numpy as np
 
 # File paths
-filepath = "../Data/Compiled/The Pareto effect in tipping social networks Tipping Data - Tipping_Data.tsv"
+filepath = "../Data/Compiled/The Pareto effect in tipping social networks_ Tipping Data - Tipping_Data.tsv"
 
 palette = sns.color_palette("colorblind", 2)
 
@@ -147,8 +147,10 @@ def main():
     ax1.text(0.02, 1.02, '(a)', transform=ax1.transAxes, fontsize=16, fontweight='bold', va='bottom', ha='left')
     ax2.text(0.02, 1.02, '(b)', transform=ax2.transAxes, fontsize=16, fontweight='bold', va='bottom', ha='left')
     
+    print(len((pd.unique(df["ref"]))), len(((df["type"])))) 
+    
     # Save in SVG format
-    plt.savefig("../Figures/Combined_plot_final.svg", format='svg', bbox_inches="tight")
+    plt.savefig("../Figures/Combined_plot_final.pdf", dpi = 300, format='pdf', bbox_inches="tight")
     plt.show()
 
 if __name__ == "__main__":

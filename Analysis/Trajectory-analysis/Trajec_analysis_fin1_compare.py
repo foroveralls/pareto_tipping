@@ -17,7 +17,7 @@ folder_path = "../Data/Time_series"
 
 # List of CSV files
 file_paths = os.listdir(folder_path)
-file_paths = ["airoldi_et_al.csv"]
+file_paths = ["Fink_2015_new_new.csv"]
 
 #%%
 def calculate_second_derivative_adaptive(x, y, i):
@@ -104,7 +104,7 @@ def process_trajectories_refined_corrected(df, trajectories, deriv_fns, file_nam
         else:
             x_normalized = x
         
-        y = traj_df['y'].to_numpy()
+        y = traj_df['y'].astype(float).to_numpy()
         y_max = max(y)
 
         fig, axes = plt.subplots(1, len(deriv_fns), figsize=(15, 5))
