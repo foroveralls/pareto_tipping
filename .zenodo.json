@@ -1,0 +1,14 @@
+{
+    "creators": [
+        {
+            "name": "Everall, Jordan",
+            "affiliation": "University of Graz",
+            "orcid": "0000-0002-2441-166X"
+        }
+    ],
+    "title": "Analysis Code and Data for Paper: The Pareto effect in tipping social networks: from minority to majority",
+    "description": "This repository contains all code and data for the title publication submitted to the ESD:SI on social tipping.",
+    "keywords": ["social tipping", "network science", "complex contagion"],
+    "license": "CC BY 4.0",
+	"version": "v1.0.0"
+}
