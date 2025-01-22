@@ -17,17 +17,17 @@ Specifically we look at what fraction of a given social group has to engage with
 
 |<img src="Figures/combined_plots.svg" alt="Image Description" width="800px" height="600px" />|
 |:--:| 
-| *(a) Steady state fraction of tipped individuals vs the fraction of individuals at or around a potential tipping point for various simulation and experimental results. (b) Distribution of tipping threshold * |
+| (a) The tipping threshold $λ$ and the steady state adopter fraction $F_∞$. Here, we show n = 86 modelling and empirical results from $N = 13$ papers on complex contagion in social networks.  (b) The distribution of tipping thresholds. Here, we classify only social tipping events, i.e. $F_∞>$ 50% of the population, numbering $n = 59$.   |
 
 ## Datasets 
 The compiled datasets to produce all figures in the manuscript are located in the `Compiled` folder.
-Data used to make the main figures Fig. 6 and Fig. 7 in the manuscript are in `Tipping_threshold_plot.csv` and `Tipping_points_fin_merged_1.csv` respectively. 
-Figures 4 and 5 are made with `The Pareto effect in tipping social networks Tipping Data - Tipping_Data`. Data for Table 4. are in `The Pareto effect in tipping social networks Tipping Data - Sheet_main_fig.csv`.
+Data used to make the main figures Fig. 5 in the manuscript are in `Tipping_threshold_plot.csv` and `Tipping_points_fin_merged_1.csv` respectively. 
+Figure 4 is made with `The Pareto effect in tipping social networks_ Tipping Data - Tipping_Data.tsv`. Data shown in Table 4 are in `The Pareto effect in tipping social networks_ Tipping Data - Sheet_main_fig.csv`. 
 
 ## Software implementation
 
 All source code used to generate the results and figures in the paper are in
-the `Analysis`and `Figures` folders respectively.  Please email me (Jordan) if there are any questions as some scripts and data are still incomplete and some cleaning is still required
+the `Analysis`and `Figures` folders respectively.  Please email me (Jordan) if there are any questions with supplementary scripts or data not covered here. 
 
 ## Getting the code
 
