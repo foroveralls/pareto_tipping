@@ -9,6 +9,10 @@
     "title": "Analysis Code and Data for Paper: The Pareto effect in tipping social networks: from minority to majority",
     "description": "This repository contains all code and data for the title publication submitted to the ESD:SI on social tipping.",
     "keywords": ["social tipping", "network science", "complex contagion"],
-    "license": "CC BY 4.0",
-	"version": "v1.0.0"
+    "license": {
+        "id": "CC-BY-4.0"
+    },
+    "upload_type": "software",
+    "publication_date": "2025-01-22",
+    "version": "1.0.0"
 }
