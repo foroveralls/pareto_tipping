@@ -1,2 +1,3 @@
 Data/Lit
-Figures
+Figures/*
+!Figures/combined_plots.svg
